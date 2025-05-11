@@ -37,7 +37,7 @@ const WhatWeDo = () => {
                 </div>
             </div>
 
-            <div className="w-[100%] h-[65%] border border-red-500 mt-[10%]">
+            <div className="w-[100%] h-[65%] border-0 border-red-500 mt-[10%]">
                 {
                     data.map((data) => (
                         <DropDown data={data}></DropDown>

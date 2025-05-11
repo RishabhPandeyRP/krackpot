@@ -28,9 +28,9 @@ const WhatWeDid = () => {
     };
 
     return (
-        <div className="w-[100%] h-[1600px] border-2 border-red-500 bg-white">
-            <div className="w-[100%] h-[500px] flex border border-red-500">
-                <div className="w-[45%] h-[100%] border border-red-500 px-[7%]">
+        <div className="w-[100%] h-[1600px] border-0 border-red-500 bg-white">
+            <div className="w-[100%] h-[500px] flex border-0 border-red-500">
+                <div className="w-[45%] h-[100%] border-0 border-red-500 px-[7%]">
                     <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">What We Did</div>
 
                     <div className="font-auster font-[600] text-[25px] text-[#01193D] w-fit ">We are passionate about delivering exceptional work that exceeds our clients' expectations.</div>
@@ -64,7 +64,7 @@ const WhatWeDid = () => {
 
             </div>
 
-            <div className="w-full h-[1100px] relative border border-red-500">
+            <div className="w-full h-[1100px] relative border-0 border-red-500">
                 <div className="w-full h-[90%] overflow-hidden px-[2%] relative mt-[4%]">
                     <div
                         className="flex transition-transform duration-700 ease-in-out"

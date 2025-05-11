@@ -20,7 +20,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className="w-[20%] h-[100%] flex justify-between items-center border border-blue-800">
+                <div className="w-[20%] h-[100%] flex justify-between items-center border-0 border-blue-800">
                     <div className="w-[50%] h-[40%] border border-[#01193D] rounded-lg relative">
                         <button className="w-[100%] h-[100%] border border-[#01193D] rounded-lg bg-[#01193D] absolute top-1 left-1 flex justify-center items-center gap-[8%]">
 

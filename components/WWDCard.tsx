@@ -7,8 +7,8 @@ const WWDCard = ({ data }: {
     }
 }) => {
     return (
-        <div className="w-[750px] h-[850px] border border-[#01193D]">
-            <div className="w-[100%] h-[80%] relative p-2 border border-[#01193D]">
+        <div className="w-[750px] h-[850px] border-0 border-[#01193D]">
+            <div className="w-[100%] h-[80%] relative p-2 border-0 border-[#01193D]">
                 <Image
                     src={data.image}
                     alt="card image"

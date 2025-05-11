@@ -2,15 +2,15 @@ import Image from "next/image"
 
 const Team = () => {
     return (
-        <div className="w-[100%] h-[1400px] border border-green-500 bg-white">
+        <div className="w-[100%] h-[1400px] border-0 border-green-500 bg-white">
 
-            <div className="w-[100%] h-[700px] flex flex-col border border-blue-500">
+            <div className="w-[100%] h-[700px] flex flex-col border-0 border-blue-500">
                 <div className="w-[100%] font-auster text-shadow text-stroke font-[700] text-[90px] text-[#DE9400] leading-28 px-[5%] my-[0.5%]">
                     Who We Are
                 </div>
 
                 <div className="w-[100%] h-[100%] flex justify-between px-[5%]">
-                    <div className="w-[35%] relative border border-red-500">
+                    <div className="w-[35%] relative border-0 border-red-500">
                         <Image
                             src={"/whoWeAreImage.svg"}
                             alt=""
@@ -18,7 +18,7 @@ const Team = () => {
                         ></Image>
                     </div>
 
-                    <div className="w-[65%] border border-red-500 mt-[2%] relative">
+                    <div className="w-[65%] border-0 border-red-500 mt-[2%] relative">
                         <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">CReATiNG INSPIRATiON</div>
                         <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28 absolute right-0 -mt-[5%]">WiTH CReATiVE SoLUTiONS</div>
 
@@ -33,7 +33,7 @@ const Team = () => {
                 </div>
             </div>
 
-            <div className="w-[100%] h-[700px] flex flex-col border border-blue-500">
+            <div className="w-[100%] h-[700px] flex flex-col border-0 border-blue-500">
                 <div className="w-[100%] font-auster text-shadow text-stroke font-[700] text-[90px] text-[#DE9400] leading-28 px-[5%] my-[1%] text-center">
                 The Team
                 </div>
