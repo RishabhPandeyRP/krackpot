@@ -28,7 +28,32 @@ const WhatWeDid = () => {
     };
 
     return (
-        <div className="w-[100%] h-[1600px] border-0 border-red-500 bg-white">
+        <div className="w-[100%] min-h-[1600px] h-auto border-0 border-red-500 bg-white relative">
+            <div className="absolute inset-0">
+                {/* Horizontal lines of dots */}
+                {Array.from({ length: 9 }).map((_, i) => (
+                    <div
+                        key={`h-${i}`}
+                        className="flex absolute w-full"
+                        style={{
+                            top: `${i * 12.5}%`,
+                            transform: 'translateY(-50%)'
+                        }}
+                    >
+                        {/* Dots across the horizontal line */}
+                        {Array.from({ length: 9 }).map((_, j) => (
+                            <div
+                                key={`dot-${i}-${j}`}
+                                className="absolute w-1 h-1 bg-[#9098af] rounded-full"
+                                style={{
+                                    left: `${j * 12.5}%`,
+                                    transform: 'translateX(-50%)'
+                                }}
+                            ></div>
+                        ))}
+                    </div>
+                ))}
+            </div>
             <div className="w-[100%] h-[500px] flex border-0 border-red-500">
                 <div className="w-[45%] h-[100%] border-0 border-red-500 px-[7%]">
                     <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">What We Did</div>
@@ -43,7 +68,7 @@ const WhatWeDid = () => {
                             </div>
                             <div className="relative w-[20%] h-full">
                                 <Image
-                                    src="/letsTalk.svg"
+                                    src="/enter_button 1.svg"
                                     alt="lets talk picture"
                                     fill
                                     className="rounded-bl-lg rounded-br-lg object-contain"
@@ -96,7 +121,7 @@ const WhatWeDid = () => {
                 </div>
             </div>
         </div>
-        
+
     )
 }
 

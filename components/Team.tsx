@@ -2,7 +2,33 @@ import Image from "next/image"
 
 const Team = () => {
     return (
-        <div className="w-[100%] h-[1400px] border-0 border-green-500 bg-white">
+        <div className="w-[100%] h-[1400px] border-0 border-green-500 bg-white relative">
+
+            <div className="absolute inset-0">
+                {/* Horizontal lines of dots */}
+                {Array.from({ length: 8 }).map((_, i) => (
+                    <div
+                        key={`h-${i}`}
+                        className="flex absolute w-full"
+                        style={{
+                            top: `${(i + 1) * 12.5}%`,
+                            transform: 'translateY(-50%)'
+                        }}
+                    >
+                        {/* Dots across the horizontal line */}
+                        {Array.from({ length: 8 }).map((_, j) => (
+                            <div
+                                key={`dot-${i}-${j}`}
+                                className="absolute w-1 h-1 bg-[#9098af] rounded-full"
+                                style={{
+                                    left: `${(j + 1) * 12.5}%`,
+                                    transform: 'translateX(-50%)'
+                                }}
+                            ></div>
+                        ))}
+                    </div>
+                ))}
+            </div>
 
             <div className="w-[100%] h-[700px] flex flex-col border-0 border-blue-500">
                 <div className="w-[100%] font-auster text-shadow text-stroke font-[700] text-[90px] text-[#DE9400] leading-28 px-[5%] my-[0.5%]">
@@ -35,7 +61,7 @@ const Team = () => {
 
             <div className="w-[100%] h-[700px] flex flex-col border-0 border-blue-500">
                 <div className="w-[100%] font-auster text-shadow text-stroke font-[700] text-[90px] text-[#DE9400] leading-28 px-[5%] my-[1%] text-center">
-                The Team
+                    The Team
                 </div>
             </div>
         </div>

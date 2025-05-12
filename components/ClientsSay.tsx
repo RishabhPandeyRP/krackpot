@@ -42,7 +42,32 @@ const ClientsSay = () => {
     };
 
     return (
-        <div className="w-[100%] min-h-[1000px] h-auto border-0 border-red-500 bg-white">
+        <div className="w-[100%] min-h-[1000px] h-auto border-0 border-red-500 bg-white relative">
+            <div className="absolute inset-0">
+                {/* Horizontal lines of dots */}
+                {Array.from({ length: 10 }).map((_, i) => (
+                    <div
+                        key={`h-${i}`}
+                        className="flex absolute w-full"
+                        style={{
+                            top: `${i * 10}%`,
+                            transform: 'translateY(-50%)'
+                        }}
+                    >
+                        {/* Dots across the horizontal line */}
+                        {Array.from({ length: 10 }).map((_, j) => (
+                            <div
+                                key={`dot-${i}-${j}`}
+                                className="absolute w-1 h-1 bg-[#9098af] rounded-full"
+                                style={{
+                                    left: `${j * 10}%`,
+                                    transform: 'translateX(-50%)'
+                                }}
+                            ></div>
+                        ))}
+                    </div>
+                ))}
+            </div>
             <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28 px-[5%] py-[5%]">
                 What our clients Say
             </div>

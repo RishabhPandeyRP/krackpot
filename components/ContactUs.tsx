@@ -58,6 +58,42 @@ const ContactUs = () => {
 
     return (
         <div className="relative w-full h-[2000] bg-white border-0 border-red-500">
+
+            <div className="absolute inset-0 z-0">
+                {/* Horizontal lines */}
+                {Array.from({ length: 11 }).map((_, index) => (
+                    <div
+                        key={`h-${index}`}
+                        className="absolute w-full border-t border-[#e2e4ee]"
+                        style={{ top: `${index * 10.5}%` }}
+                    ></div>
+                ))}
+
+                {/* Vertical lines */}
+                {Array.from({ length: 9 }).map((_, index) => (
+                    <div
+                        key={`v-${index}`}
+                        className="absolute h-full border-l border-[#e2e4ee]"
+                        style={{ left: `${index * 12.5}%` }}
+                    ></div>
+                ))}
+
+                {/* Intersection dots */}
+                {Array.from({ length: 9 }).map((_, i) => (
+                    Array.from({ length: 9 }).map((_, j) => (
+                        <div
+                            key={`dot-${i}-${j}`}
+                            className="absolute w-1 h-1 bg-[#9098af] rounded-full"
+                            style={{
+                                top: `${i * 10.5}%`,
+                                left: `${j * 12.5}%`,
+                                transform: 'translate(-50%, -50%)'
+                            }}
+                        ></div>
+                    ))
+                ))}
+            </div>
+
             <Image
                 src="/contactUs Img.svg"
                 alt="Contact background"
@@ -134,7 +170,7 @@ const ContactUs = () => {
                             <div>SUBMIT ENQUIRY</div>
                             <div className="relative w-[20%] h-full">
                                 <Image
-                                    src="/letsTalk.svg"
+                                    src="/enter_button 1.svg"
                                     alt="lets talk picture"
                                     fill
                                     className="rounded-bl-lg rounded-br-lg object-contain"

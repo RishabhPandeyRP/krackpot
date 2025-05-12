@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const Header = () => {
     return (
-        <div className="w-[100%] bg-[#e5e5f4]/80">
+        <div className="w-[100%] bg-[#e5e5f4]">
             <div className="w-[90%] h-[120px] border-0 border-amber-900 mx-auto flex justify-between">
                 <div className="w-[20%] h-[100%] border-0 border-red-500">
                     <div className="w-[100%] h-[100%] border border-[#01193D] rounded-bl-lg rounded-br-lg relative">

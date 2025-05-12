@@ -10,7 +10,7 @@ import ContactUs from "@/components/ContactUs";
 
 export default function Home() {
   return (
-    <div className="w-[100%]">
+    <div className="w-[100%] overflow-hidden">
       <Header></Header>
       <HeroSection></HeroSection>
       <Team></Team>

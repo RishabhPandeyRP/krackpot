@@ -1,51 +1,3 @@
-// import React from "react"
-// import Image from "next/image"
-
-// const HeroSection = () => {
-//     return (
-//         <div className="w-[100%] h-[700px] border border-green-500 bg-white flex relative">
-//             <div className="w-[55%] h-[70%] absolute left-[5%] top-[7%] border border-red-500">
-//                 <div className="font-auster text-shadow text-stroke font-[600] text-[110px] text-[#DE9400] w-[100%] leading-28">
-//                     CREaTIVE MiNDS <br />
-//                     THaT BRiNGS <br />
-//                     BRaNDS To <br />
-//                     LiFE
-//                 </div>
-
-//                 <div>
-//                     <div className="w-[250px] h-[50px] border border-[#01193D] relative bg-[#01193D]">
-//                         <button className="w-[100%] h-[100%] border border-[#01193D] bg-white absolute bottom-2 left-1 flex justify-center items-center gap-[8%] text-[#01193D] px-1 cursor pointer">
-
-//                             <div className="font-[700] text-[22px]">
-//                                 view our work
-//                             </div>
-//                             <div className="relative w-[20%] h-full">
-//                                 <Image
-//                                     src="/letsTalk.svg"
-//                                     alt="lets talk picture"
-//                                     fill
-//                                     className="rounded-bl-lg rounded-br-lg object-contain"
-//                                 />
-//                             </div>
-//                         </button>
-//                     </div>
-//                 </div>
-//             </div>
-
-//             <div className="w-[45%] h-[70%] absolute right-[2%] top-[9%] border border-red-500">
-//                 <div className="relative w-[100%] h-[100%]">
-//                     <Image
-//                         src={"/heroAsset.svg"}
-//                         alt="hero asset"
-//                         fill
-//                     ></Image>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default HeroSection
 
 
 import React from "react"
@@ -53,10 +5,45 @@ import Image from "next/image"
 
 const HeroSection = () => {
     return (
-        <div className="w-full h-[700px] relative overflow-hidden  border-0 border-green-500 flex">
+        <div className="w-full h-[700px] relative overflow-hidden  border-0 border-green-500 flex bg-white">
+
+            <div className="absolute inset-0">
+                {/* Horizontal lines */}
+                {Array.from({ length: 8 }).map((_, index) => (
+                    <div
+                        key={`h-${index}`}
+                        className="absolute w-full border-t border-[#e2e4ee]"
+                        style={{ top: `${(index + 1) * 25.5}%` }}
+                    ></div>
+                ))}
+
+                {/* Vertical lines */}
+                {Array.from({ length: 8 }).map((_, index) => (
+                    <div
+                        key={`v-${index}`}
+                        className="absolute h-full border-l border-[#e2e4ee]"
+                        style={{ left: `${(index + 1) * 12.5}%` }}
+                    ></div>
+                ))}
+
+                {/* Intersection dots */}
+                {Array.from({ length: 7 }).map((_, i) => (
+                    Array.from({ length: 7 }).map((_, j) => (
+                        <div
+                            key={`dot-${i}-${j}`}
+                            className="absolute w-1 h-1 bg-[#9098af] rounded-full"
+                            style={{
+                                top: `${(i + 1) * 25.5}%`,
+                                left: `${(j + 1) * 12.5}%`,
+                                transform: 'translate(-50%, -50%)'
+                            }}
+                        ></div>
+                    ))
+                ))}
+            </div>
 
             {/* 🔷 Background SVG Image */}
-            <div className="absolute inset-0 z-0">
+            {/* <div className="absolute inset-0 z-0">
                 <Image
                     src="/WhatsApp Image 2025-05-11 at 16.10.27_e5d0b178.jpg" // replace with your background SVG
                     alt="background"
@@ -64,7 +51,7 @@ const HeroSection = () => {
                     className="object-cover"
                     priority
                 />
-            </div>
+            </div> */}
 
             {/* 🔷 Main Content */}
             <div className="w-[55%] h-[70%] absolute left-[5%] top-[7%] z-10 border-0 border-red-500 flex flex-col gap-[9%]">
@@ -82,7 +69,7 @@ const HeroSection = () => {
                             <div className="font-[700] text-[22px]">view our work</div>
                             <div className="relative w-[20%] h-full">
                                 <Image
-                                    src="/letsTalk.svg"
+                                    src="/enter_button 1.svg"
                                     alt="lets talk"
                                     fill
                                     className="object-contain rounded-bl-lg rounded-br-lg"
