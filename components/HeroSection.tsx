@@ -3,9 +3,49 @@
 import React from "react"
 import Image from "next/image"
 
+
+const AngledLine = ({
+    startY = 30,    // Bottom point
+    endY = 5,       // Top point
+    color = "#DE9400",
+    opacity = 0.3,
+    strokeWidth = 1
+}) => (
+    <div className="absolute inset-x-0 bottom-0 z-10 pointer-events-none h-[70px] bg-white -translate-y-[50px]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" preserveAspectRatio="none" className="w-full h-full">
+            {/* Main line */}
+            <line
+                x1="0"
+                y1={startY}
+                x2="100"
+                y2={endY}
+                stroke={color}
+                strokeWidth={strokeWidth}
+                strokeLinecap="round"
+                opacity={opacity}
+            />
+
+            {/* Secondary line for depth */}
+            <line
+                x1="0"
+                y1={startY - 3}
+                x2="100"
+                y2={endY + 3}
+                stroke={color}
+                strokeWidth={strokeWidth / 2}
+                strokeLinecap="round"
+                opacity={opacity / 2}
+            />
+        </svg>
+    </div>
+)
+
+
 const HeroSection = () => {
     return (
         <div className="w-full h-[700px] relative overflow-hidden  border-0 border-green-500 flex bg-white">
+
+            <AngledLine></AngledLine>
 
             <div className="absolute inset-0">
                 {/* Horizontal lines */}
@@ -90,6 +130,8 @@ const HeroSection = () => {
                     />
                 </div>
             </div>
+
+
         </div>
     )
 }
