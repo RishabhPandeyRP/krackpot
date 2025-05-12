@@ -19,11 +19,20 @@ const DropDown = ({ data }: {
     }
 
     return (
-        <div className="w-[80%] mx-auto border-t-1 border-red-500">
+        <div className="w-[80%] mx-auto border-t-1 border-[#01193D]" onClick={() => { setIsopen(!isOpen) }}>
             <div className="w-[100%] h-fit flex items-center gap-[3%] relative">
-                <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">
-                    {data.heading}
+                <div className=" w-fit leading-28 flex gap-5">
+                    <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400]">
+                        {data.heading}
+                    </div>
+
+
+                    <div className="font-auster font-[500] text-[65px] text-[#01193D] w-fit leading-28">
+                        :
+                    </div>
                 </div>
+
+
 
                 <div className="flex gap-2">
                     {
@@ -38,16 +47,16 @@ const DropDown = ({ data }: {
                 <button className="text-black absolute right-10" onClick={btnHandler}>
                     {
                         isOpen ? <Image
-                        src={"/down.svg"}
-                        alt=""
-                        width={50}
-                        height={50}
+                            src={"/up.svg"}
+                            alt=""
+                            width={50}
+                            height={50}
 
                         ></Image> : <Image
-                        src={"/up.svg"}
-                        alt=""
-                        width={50}
-                        height={50}
+                            src={"/down.svg"}
+                            alt=""
+                            width={50}
+                            height={50}
 
                         ></Image>
                     }
@@ -57,22 +66,27 @@ const DropDown = ({ data }: {
 
             </div>
 
-            <div className={`border border-red-500 w-[100%] text-black ${isOpen ? "h-[100px]" : "h-[0px] hidden"}`}>
-                {
-                    data.sub_headings.map((item) => (
-                        <div className="w-[100%] py-2">
+            <div
+                className={`border-t-1 border-[#01193D] w-full text-black overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-[200px] py-2" : "max-h-0 py-0"
+                    }`}
+            >
+                {data.sub_headings.map((item, idx) => (
+                    <div key={idx} className="w-full py-2 flex gap-5">
+                        <div className="font-auster font-[600] text-[25px] text-[#01193D] w-fit">
                             {item.heading} :
-                            <div className="flex gap-2">
-                                {
-                                    item.sub_headings.map((content) => (
-                                        <span>{content}</span>
-                                    ))
-                                }
-                            </div>
                         </div>
-                    ))
-                }
+
+                        <div className="flex gap-4">
+                            {item.sub_headings.map((content, i) => (
+                                <span key={i} className="font-auster font-[500] text-[25px] text-[#01193D] w-fit">
+                                    {content}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
+
         </div>
     )
 }

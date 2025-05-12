@@ -5,6 +5,8 @@ import Team from "@/components/Team";
 import Clients from "@/components/Clients";
 import WhatWeDid from "@/components/WhatWeDid";
 import WhatWeDo from "@/components/WhatWeDo";
+import ClientsSay from "@/components/ClientsSay";
+import ContactUs from "@/components/ContactUs";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <Clients></Clients>
       <WhatWeDid></WhatWeDid>
       <WhatWeDo></WhatWeDo>
+      <ClientsSay></ClientsSay>
+      <ContactUs></ContactUs>
     </div>
   );
 }

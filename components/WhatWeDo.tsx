@@ -15,14 +15,14 @@ const WhatWeDo = () => {
         }]
     }]
     return (
-        <div className="w-[100%] h-[1000px] bg-white pt-[10%]">
-            <div className="w-[100%] h-[35%] flex gap-[4%]">
-                <div className="w-[60%] h-[100%] relative">
+        <div className="w-[100%] min-h-[1000px] h-auto bg-white pt-[10%]">
+            <div className="w-[100%] h-[35%] flex items-center gap-[4%]">
+                <div className="w-[60%] aspect-[5/3] relative z-20 border-0 border-amber-700">
                     <Image
                         src={"/whatwedo.svg"}
                         alt=""
                         fill
-                        className="object-contain scale-[185%]"
+                        className="object-contain scale-[100%]"
                     ></Image>
                 </div>
 
@@ -37,7 +37,7 @@ const WhatWeDo = () => {
                 </div>
             </div>
 
-            <div className="w-[100%] h-[65%] border-0 border-red-500 mt-[10%]">
+            <div className="w-[100%] h-fit border-0 border-red-500 mt-[10%]">
                 {
                     data.map((data) => (
                         <DropDown data={data}></DropDown>
