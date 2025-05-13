@@ -7,8 +7,8 @@ import Image from "next/image"
 const AngledLine = ({
     startY = 30,    // Bottom point
     endY = 5,       // Top point
-    color = "#DE9400",
-    opacity = 0.3,
+    color = "#9ea7b7",
+    opacity = 0.5,
     strokeWidth = 1
 }) => (
     <div className="absolute inset-x-0 bottom-0 z-10 pointer-events-none h-[70px] bg-white -translate-y-[50px]">

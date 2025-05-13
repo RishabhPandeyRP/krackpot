@@ -56,10 +56,87 @@ const ContactUs = () => {
         // You can now send jsonData to your backend/API
     };
 
-    return (
-        <div className="relative w-full h-[2000] bg-white border-0 border-red-500">
+    const AngledLine = ({
+        startY = 5,    // Bottom point
+        endY = 5,       // Top point
+        color = "#9ea7b7",
+        opacity = 0.5,
+        strokeWidth = 1,
 
-            <div className="absolute inset-0 z-0">
+    }) => (
+        <div className={`absolute inset-x-0 bottom-0 z-20 pointer-events-none h-[40px]  translate-y-[30px] border-0 border-red-500`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" preserveAspectRatio="none" className="w-full h-full">
+                {/* Main line */}
+                <line
+                    x1="0"
+                    y1={startY}
+                    x2="100"
+                    y2={endY}
+                    stroke={color}
+                    strokeWidth={strokeWidth}
+                    strokeLinecap="round"
+                    opacity={opacity}
+                />
+
+                {/* Secondary line for depth */}
+                <line
+                    x1="0"
+                    y1={startY - 3}
+                    x2="100"
+                    y2={endY + 3}
+                    stroke={color}
+                    strokeWidth={strokeWidth / 2}
+                    strokeLinecap="round"
+                    opacity={opacity / 2}
+                />
+            </svg>
+        </div>
+    )
+
+    const AngledLine2 = ({
+        startY = 5,    // Bottom point
+        endY = 5,       // Top point
+        color = "#9ea7b7",
+        opacity = 0.5,
+        strokeWidth = 1,
+
+    }) => (
+        <div className={`absolute inset-x-0 top-0 z-20 pointer-events-none h-[40px]  translate-y-[30px]`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" preserveAspectRatio="none" className="w-full h-full">
+                {/* Main line */}
+                <line
+                    x1="0"
+                    y1={startY}
+                    x2="100"
+                    y2={endY}
+                    stroke={color}
+                    strokeWidth={strokeWidth}
+                    strokeLinecap="round"
+                    opacity={opacity}
+                />
+
+                {/* Secondary line for depth */}
+                <line
+                    x1="0"
+                    y1={startY - 3}
+                    x2="100"
+                    y2={endY + 3}
+                    stroke={color}
+                    strokeWidth={strokeWidth / 2}
+                    strokeLinecap="round"
+                    opacity={opacity / 2}
+                />
+            </svg>
+        </div>
+    )
+
+    return (
+        <div className="relative w-full h-[2000px] bg-white border-0 border-red-500 -rotate-[2deg] origin-top-left">
+
+            <AngledLine></AngledLine>
+            <AngledLine2></AngledLine2>
+
+            <div className="absolute inset-0 z-0 rotate-[2deg] origin-top-left">
                 {/* Horizontal lines */}
                 {Array.from({ length: 11 }).map((_, index) => (
                     <div
@@ -98,10 +175,10 @@ const ContactUs = () => {
                 src="/contactUs Img.svg"
                 alt="Contact background"
                 fill
-                className="object-contain"
+                className="object-contain rotate-[2deg] origin-top-left"
                 priority
             />
-            <div className="absolute w-[700px] h-[1100px] border-0 border-red-500 flex flex-col items-center z-10 top-[20%] left-[27%] px-[5%] gap-[2%]">
+            <div className="absolute w-[700px] h-[1100px] border-0 border-red-500 flex flex-col items-center z-10 top-[20%] left-[27%] px-[5%] gap-[2%] rotate-[2deg] origin-top-left">
                 <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] text-center leading-tight w-[50%]">
                     Let's Get Started
                 </div>
@@ -179,6 +256,23 @@ const ContactUs = () => {
                         </button>
                     </div>
                 </form>
+            </div>
+
+            <div className="absolute -bottom-27 w-[105%] border-t-1 border-[#9ea7b7]/50 -rotate-[2deg] origin-top-left h-[160px] -left-18 bg-white z-20 overflow-hidden">
+                <div className="w-[15%] h-[80%] absolute right-[10%] -top-[10%] bg-[#01193D]  rotate-[2deg] origin-top-left rounded-lg">
+
+                    <div className="w-[100%] h-[100%] bg-white absolute bottom-2 left-2 border border-[#01193D] rounded-lg flex justify-center items-center">
+                        <Image
+                            src={"/blue_logo 1.svg"}
+                            alt="logo"
+                            width={150}
+                            height={150}
+                            className=" z-20"
+                        ></Image>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     );

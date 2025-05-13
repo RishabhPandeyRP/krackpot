@@ -27,9 +27,48 @@ const WhatWeDid = () => {
         }
     };
 
+    const AngledLine = ({
+        startY = 5,    // Bottom point
+        endY = 5,       // Top point
+        color = "#9ea7b7",
+        opacity = 0.5,
+        strokeWidth = 1
+    }) => (
+        <div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none h-[40px]  translate-y-[30px]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" preserveAspectRatio="none" className="w-full h-full">
+                {/* Main line */}
+                <line
+                    x1="0"
+                    y1={startY}
+                    x2="100"
+                    y2={endY}
+                    stroke={color}
+                    strokeWidth={strokeWidth}
+                    strokeLinecap="round"
+                    opacity={opacity}
+                />
+    
+                {/* Secondary line for depth */}
+                <line
+                    x1="0"
+                    y1={startY - 3}
+                    x2="100"
+                    y2={endY + 3}
+                    stroke={color}
+                    strokeWidth={strokeWidth / 2}
+                    strokeLinecap="round"
+                    opacity={opacity / 2}
+                />
+            </svg>
+        </div>
+    )
+
     return (
-        <div className="w-[100%] min-h-[1600px] h-auto border-0 border-red-500 bg-white relative">
-            <div className="absolute inset-0">
+        <div className="w-[100%] min-h-[1750px] h-auto border-0 border-red-500 bg-white relative -rotate-[2deg] origin-top-left">
+
+            <AngledLine></AngledLine>
+
+            <div className="absolute inset-0 rotate-[2deg] origin-top-left">
                 {/* Horizontal lines of dots */}
                 {Array.from({ length: 9 }).map((_, i) => (
                     <div
@@ -54,7 +93,7 @@ const WhatWeDid = () => {
                     </div>
                 ))}
             </div>
-            <div className="w-[100%] h-[500px] flex border-0 border-red-500">
+            <div className="w-[100%] h-[500px] flex border-0 border-red-500 rotate-[2deg] origin-top-left">
                 <div className="w-[45%] h-[100%] border-0 border-red-500 px-[7%]">
                     <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">What We Did</div>
 
@@ -89,7 +128,7 @@ const WhatWeDid = () => {
 
             </div>
 
-            <div className="w-full h-[1100px] relative border-0 border-red-500">
+            <div className="w-full h-[1100px] relative border-0 border-red-500 rotate-[2deg] origin-top-left">
                 <div className="w-full h-[90%] overflow-hidden px-[2%] relative mt-[4%]">
                     <div
                         className="flex transition-transform duration-700 ease-in-out"

@@ -14,10 +14,49 @@ const WhatWeDo = () => {
             sub_headings: ["logo", "visual"]
         }]
     }]
-    return (
-        <div className="w-[100%] min-h-[1000px] h-auto bg-white pt-[10%] relative overflow-hidden">
 
-            <div className="absolute inset-0 z-0">
+    const AngledLine = ({
+        startY = 5,    // Bottom point
+        endY = 5,       // Top point
+        color = "#9ea7b7",
+        opacity = 0.5,
+        strokeWidth = 1
+    }) => (
+        <div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none h-[40px]  translate-y-[30px]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" preserveAspectRatio="none" className="w-full h-full">
+                {/* Main line */}
+                <line
+                    x1="0"
+                    y1={startY}
+                    x2="100"
+                    y2={endY}
+                    stroke={color}
+                    strokeWidth={strokeWidth}
+                    strokeLinecap="round"
+                    opacity={opacity}
+                />
+    
+                {/* Secondary line for depth */}
+                <line
+                    x1="0"
+                    y1={startY - 3}
+                    x2="100"
+                    y2={endY + 3}
+                    stroke={color}
+                    strokeWidth={strokeWidth / 2}
+                    strokeLinecap="round"
+                    opacity={opacity / 2}
+                />
+            </svg>
+        </div>
+    )
+
+    return (
+        <div className="w-[100%] min-h-[1300px] h-auto bg-white pt-[10%] relative overflow-hidden -rotate-[2deg] origin-top-left border-0 border-red-500">
+
+            <AngledLine></AngledLine>
+
+            <div className="absolute inset-0 z-0 rotate-[2deg] origin-top-left">
                 {/* Horizontal lines */}
                 {Array.from({ length: 9 }).map((_, index) => (
                     <div
@@ -52,7 +91,7 @@ const WhatWeDo = () => {
                 ))}
             </div>
 
-            <div className="w-[100%] h-[35%] flex items-center gap-[4%] relative z-10">
+            <div className="w-[100%] h-[35%] flex items-center gap-[4%] relative z-10 rotate-[2deg] origin-top-left">
                 <div className="w-[60%] aspect-[5/3] relative z-20 border-0 border-amber-700">
                     <Image
                         src={"/whatwedo.svg"}
@@ -73,7 +112,7 @@ const WhatWeDo = () => {
                 </div>
             </div>
 
-            <div className="w-[100%] h-fit border-0 border-red-500 mt-[10%] relative z-10">
+            <div className="w-[100%] h-fit border-0 border-red-500 mt-[10%] relative z-10 rotate-[2deg] origin-top-left">
                 {
                     data.map((data , index) => (
                         <DropDown data={data} key={index}></DropDown>

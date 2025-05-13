@@ -41,9 +41,47 @@ const ClientsSay = () => {
         }
     };
 
+    const AngledLine = ({
+        startY = 5,    // Bottom point
+        endY = 5,       // Top point
+        color = "#9ea7b7",
+        opacity = 0.5,
+        strokeWidth = 1
+    }) => (
+        <div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none h-[40px]  translate-y-[30px]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" preserveAspectRatio="none" className="w-full h-full">
+                {/* Main line */}
+                <line
+                    x1="0"
+                    y1={startY}
+                    x2="100"
+                    y2={endY}
+                    stroke={color}
+                    strokeWidth={strokeWidth}
+                    strokeLinecap="round"
+                    opacity={opacity}
+                />
+    
+                {/* Secondary line for depth */}
+                <line
+                    x1="0"
+                    y1={startY - 3}
+                    x2="100"
+                    y2={endY + 3}
+                    stroke={color}
+                    strokeWidth={strokeWidth / 2}
+                    strokeLinecap="round"
+                    opacity={opacity / 2}
+                />
+            </svg>
+        </div>
+    )
+
     return (
-        <div className="w-[100%] min-h-[1000px] h-auto border-0 border-red-500 bg-white relative">
-            <div className="absolute inset-0">
+        <div className="w-[100%] min-h-[1400px] h-auto border-0 border-red-500 bg-white relative -rotate-[2deg] origin-top-left">
+            <AngledLine></AngledLine>
+
+            <div className="absolute inset-0 rotate-[2deg] origin-top-left">
                 {/* Horizontal lines of dots */}
                 {Array.from({ length: 10 }).map((_, i) => (
                     <div
@@ -68,11 +106,11 @@ const ClientsSay = () => {
                     </div>
                 ))}
             </div>
-            <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28 px-[5%] py-[5%]">
+            <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28 px-[5%] py-[5%] rotate-[2deg] origin-top-left">
                 What our clients Say
             </div>
 
-            <div className="w-full h-[1000px] relative border-0 border-red-500">
+            <div className="w-full h-[1000px] relative border-0 border-red-500 rotate-[2deg] origin-top-left">
                 <div className="w-full min-h-[80%] h-auto px-[2%] relative mt-[0%] border-0 border-green-500 overflow-hidden">
                     <div
                         className="flex items-center transition-transform duration-700 ease-in-out"

@@ -1,10 +1,50 @@
 import Image from "next/image"
 
+const AngledLine = ({
+    startY = 5,    // Bottom point
+    endY = 5,       // Top point
+    color = "#9ea7b7",
+    opacity = 0.5,
+    strokeWidth = 1
+}) => (
+    <div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none h-[70px]  -translate-y-[0px]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" preserveAspectRatio="none" className="w-full h-full">
+            {/* Main line */}
+            <line
+                x1="0"
+                y1={startY}
+                x2="100"
+                y2={endY}
+                stroke={color}
+                strokeWidth={strokeWidth}
+                strokeLinecap="round"
+                opacity={opacity}
+            />
+
+            {/* Secondary line for depth */}
+            <line
+                x1="0"
+                y1={startY - 3}
+                x2="100"
+                y2={endY + 3}
+                stroke={color}
+                strokeWidth={strokeWidth / 2}
+                strokeLinecap="round"
+                opacity={opacity / 2}
+            />
+        </svg>
+    </div>
+)
+
 const Team = () => {
     return (
-        <div className="w-[100%] h-[1400px] border-0 border-green-500 bg-white relative">
+        <div className="w-[100%] h-[1400px] border-0 border-green-500 bg-white relative -rotate-[2deg] origin-top-left">
 
-            <div className="absolute inset-0">
+            <AngledLine></AngledLine>
+
+            {/* <div className="absolute -bottom-0 left-0 w-full h-[80px] bg-white -rotate-[2deg] origin-top-left z-10" /> */}
+
+            <div className="absolute inset-0 rotate-[2deg] origin-top-left">
                 {/* Horizontal lines of dots */}
                 {Array.from({ length: 8 }).map((_, i) => (
                     <div
@@ -30,7 +70,7 @@ const Team = () => {
                 ))}
             </div>
 
-            <div className="w-[100%] h-[700px] flex flex-col border-0 border-blue-500">
+            <div className="w-[100%] h-[700px] flex flex-col border-0 border-blue-500 rotate-[2deg] origin-top-left">
                 <div className="w-[100%] font-auster text-shadow text-stroke font-[700] text-[90px] text-[#DE9400] leading-28 px-[5%] my-[0.5%]">
                     Who We Are
                 </div>
@@ -59,7 +99,7 @@ const Team = () => {
                 </div>
             </div>
 
-            <div className="w-[100%] h-[700px] flex flex-col border-0 border-blue-500">
+            <div className="w-[100%] h-[700px] flex flex-col border-0 border-blue-500 rotate-[2deg] origin-top-left">
                 <div className="w-[100%] font-auster text-shadow text-stroke font-[700] text-[90px] text-[#DE9400] leading-28 px-[5%] my-[1%] text-center">
                     The Team
                 </div>

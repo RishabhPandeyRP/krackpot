@@ -52,9 +52,51 @@ const Clients = () => {
         ],
     };
 
+
+    const AngledLine = ({
+        startY = 5,    // Bottom point
+        endY = 5,       // Top point
+        color = "#9ea7b7",
+        opacity = 0.5,
+        strokeWidth = 1
+    }) => (
+        <div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none h-[40px]  translate-y-[30px]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" preserveAspectRatio="none" className="w-full h-full">
+                {/* Main line */}
+                <line
+                    x1="0"
+                    y1={startY}
+                    x2="100"
+                    y2={endY}
+                    stroke={color}
+                    strokeWidth={strokeWidth}
+                    strokeLinecap="round"
+                    opacity={opacity}
+                />
+    
+                {/* Secondary line for depth */}
+                <line
+                    x1="0"
+                    y1={startY - 3}
+                    x2="100"
+                    y2={endY + 3}
+                    stroke={color}
+                    strokeWidth={strokeWidth / 2}
+                    strokeLinecap="round"
+                    opacity={opacity / 2}
+                />
+            </svg>
+        </div>
+    )
+
     return (
-        <div className="w-full h-[1100px] border border-b-blue-700 bg-[#efeff8] relative">
-            <div className="absolute inset-0 z-0">
+        <div className="w-full h-[1100px] border-0 border-b-blue-700 relative overflow-hidden -rotate-[2deg] origin-top-left">
+            
+            <AngledLine></AngledLine>
+
+            {/* <div className="absolute -bottom-15 left-0 w-full h-[80px] bg-white -rotate-[2deg] origin-top-left z-10" /> */}
+            
+            <div className="absolute inset-0 z-0 rotate-[2deg] origin-top-left">
                 {/* Horizontal lines */}
                 {Array.from({ length: 9 }).map((_, index) => (
                     <div
@@ -68,7 +110,7 @@ const Clients = () => {
                 {Array.from({ length: 9 }).map((_, index) => (
                     <div
                         key={`v-${index}`}
-                        className="absolute h-full border-l border-[#e2e4ee]"
+                        className="absolute h-full border-l border-[#e2e4ee] rotate-[2deg] origin-top-left"
                         style={{ left: `${index * 12.5}%` }}
                     ></div>
                 ))}
@@ -78,7 +120,7 @@ const Clients = () => {
                     Array.from({ length: 9 }).map((_, j) => (
                         <div
                             key={`dot-${i}-${j}`}
-                            className="absolute w-1 h-1 bg-[#9098af] rounded-full"
+                            className="absolute w-1 h-1 bg-[#9098af] rounded-full rotate-[2deg] origin-top-left"
                             style={{
                                 top: `${i * 12.5}%`,
                                 left: `${j * 12.5}%`,
@@ -89,7 +131,7 @@ const Clients = () => {
                 ))}
             </div>
 
-            <div className="w-full h-[550px] border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10">
+            <div className="w-full h-[550px] border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 rotate-[2deg] origin-top-left">
                 <div className="flex flex-col w-full h-fit px-[5%] my-[1%]">
                     <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">
                         Our Clients
@@ -119,7 +161,7 @@ const Clients = () => {
                 </div>
             </div>
 
-            <div className="w-full h-[550px] border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10">
+            <div className="w-full h-[550px] border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 rotate-[2deg] origin-top-left">
                 <div className="flex flex-col w-full h-fit px-[5%] my-[1%] items-end">
                     <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">
                         Agencies Joined Hands with us
