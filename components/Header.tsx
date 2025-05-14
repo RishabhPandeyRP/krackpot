@@ -1,9 +1,14 @@
-import React from "react"
+"use client"
+import React, { useState } from "react"
 import Image from "next/image"
 
 const Header = () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const dataArr = ["ABOUT", "WORK", "SERVICES", "CLIENTS", "CASE STUDIES", "CONTACT", "PRIVACY POLICY"]
+    const icons = ["/Linkedin (1).svg", "/Meta.svg", "/Insta (1).svg"]
+
     return (
-        <div className="w-[100%] bg-[#e5e5f4]">
+        <div className="w-[100%] h-[120px] bg-[#e5e5f4] relative">
             <div className="w-[90%] h-[120px] border-0 border-amber-900 mx-auto flex justify-between">
                 <div className="w-[20%] h-[100%] border-0 border-red-500">
                     <div className="w-[100%] h-[100%] border border-[#01193D] rounded-bl-lg rounded-br-lg relative">
@@ -38,7 +43,7 @@ const Header = () => {
                         </button>
                     </div>
 
-                    <div className="relative w-[20%] h-[23%]">
+                    <div className="relative w-[20%] h-[23%] cursor-pointer" onClick={() => { setIsOpen(!isOpen) }}>
                         <Image
                             src="/Burger Menu.svg"
                             alt="burger picture"
@@ -48,6 +53,44 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+
+            {isOpen && <div className="absolute top-[100%] w-[100%] h-auto border-0 border-red-500 z-20 flex bg-[#DFDFF1] px-[5%] pb-3">
+                <div className="w-[55%] h-auto relative border-0 border-red-500 flex justify-center items-center">
+                    <Image
+                    src={"/blue_logo 1.svg"}
+                    alt="blue icon"
+                    width={500}
+                    height={500}
+                    className="object-contain"
+                    ></Image>
+                </div>
+                <div className="flex flex-col w-[40%] justify-end items-end">
+                    <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Menu</div>
+                    {
+                        dataArr.map((item, index) => (
+                            <div className="w-fit font-auster font-[900] text-[35px] text-[#01193D]" key={index}>
+                                {item}
+                            </div>
+                        ))
+                    }
+
+                    <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Follow us</div>
+
+                    <div className="w-full flex justify-end items-end gap-4">
+                        {
+                            icons.map((item, index) => (
+                                <Image
+                                    src={item}
+                                    alt="icon"
+                                    width={40}
+                                    height={40}
+                                    key={index}
+                                />
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>}
         </div>
     )
 }
