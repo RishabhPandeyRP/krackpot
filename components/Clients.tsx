@@ -90,7 +90,7 @@ const Clients = () => {
     )
 
     return (
-        <div className="w-full h-[1100px] border-0 border-b-blue-700 relative overflow-hidden -rotate-[2deg] origin-top-left">
+        <div className="w-full lg:h-[1100px] sm:h-[1150px] border-0 border-b-blue-700 relative overflow-hidden -rotate-[2deg] origin-top-left flex flex-col sm:gap-[10%] lg:gap-[0%]">
             
             <AngledLine></AngledLine>
 
@@ -131,12 +131,12 @@ const Clients = () => {
                 ))}
             </div>
 
-            <div className="w-full h-[550px] border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 rotate-[2deg] origin-top-left">
+            <div className="w-full lg:h-[550px] sm:h-auto border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 rotate-[2deg] origin-top-left">
                 <div className="flex flex-col w-full h-fit px-[5%] my-[1%]">
-                    <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] sm:text-[65px] text-[#DE9400] w-fit leading-28">
                         Our Clients
                     </div>
-                    <div className="font-auster font-[600] text-[25px] text-[#01193D] w-fit leading-28 -mt-[50px]">
+                    <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[#01193D] w-fit leading-28 -mt-[50px]">
                         We value our clients as partners in our growth.
                     </div>
                 </div>
@@ -161,12 +161,12 @@ const Clients = () => {
                 </div>
             </div>
 
-            <div className="w-full h-[550px] border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 rotate-[2deg] origin-top-left">
+            <div className="w-full lg:h-[550px] sm:h-auto border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 rotate-[2deg] origin-top-left">
                 <div className="flex flex-col w-full h-fit px-[5%] my-[1%] items-end">
-                    <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] sm:text-[65px] text-[#DE9400] w-fit leading-28">
                         Agencies Joined Hands with us
                     </div>
-                    <div className="font-auster font-[600] text-[25px] text-[#01193D] w-fit leading-28 -mt-[50px]">
+                    <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[#01193D] w-fit leading-28 -mt-[50px]">
                         The combined expertise and resources can lead to better results.
                     </div>
                 </div>

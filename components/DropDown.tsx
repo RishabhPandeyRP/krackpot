@@ -19,7 +19,7 @@ const DropDown = ({ data }: {
     }
 
     return (
-        <div className="w-[80%] mx-auto border-t-1 border-[#01193D] bg-white" onClick={() => { setIsopen(!isOpen) }}>
+        <div className="lg:w-[80%] sm:w-[85%] mx-auto border-t-1 border-[#01193D] bg-white" onClick={() => { setIsopen(!isOpen) }}>
             <div className="w-[100%] h-fit flex items-center gap-[3%] relative">
                 <div className=" w-fit leading-28 flex gap-5">
                     <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400]">

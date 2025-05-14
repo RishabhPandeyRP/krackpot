@@ -64,7 +64,7 @@ const WhatWeDid = () => {
     )
 
     return (
-        <div className="w-[100%] min-h-[1750px] h-auto border-0 border-red-500 bg-white relative -rotate-[2deg] origin-top-left">
+        <div className="w-[100%] min-h-[1750px] h-auto border-0 border-red-500 bg-white relative -rotate-[2deg] origin-top-left flex flex-col sm:gap-[100px] lg:gap-0 sm:py-7 lg:py-0">
 
             <AngledLine></AngledLine>
 
@@ -93,13 +93,14 @@ const WhatWeDid = () => {
                     </div>
                 ))}
             </div>
-            <div className="w-[100%] h-[500px] flex border-0 border-red-500 rotate-[2deg] origin-top-left">
-                <div className="w-[45%] h-[100%] border-0 border-red-500 px-[7%]">
-                    <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">What We Did</div>
 
-                    <div className="font-auster font-[600] text-[25px] text-[#01193D] w-fit ">We are passionate about delivering exceptional work that exceeds our clients' expectations.</div>
+            <div className="w-[100%] lg:h-[500px] sm:h-[650px] flex border-0 border-red-500 rotate-[2deg] origin-top-left lg:flex-row sm:flex-col sm:gap-[10%]">
+                <div className="lg:w-[45%] sm:w-[80%] sm:mx-auto h-[100%] border-0 border-red-500 px-[7%]">
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] sm:text-[65px] text-[#DE9400] w-fit leading-28">What We Did</div>
 
-                    <div className="w-[50%] h-[10%] border border-[#01193D]  relative mt-[6%] bg-[#01193D]">
+                    <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[#01193D] w-fit ">We are passionate about delivering exceptional work that exceeds our clients' expectations.</div>
+
+                    <div className="sm:w-[50%] lg:w-[60%] lg:h-[10%] sm:h-[15%] border border-[#01193D]  relative mt-[6%] bg-[#01193D]">
                         <button className="w-[100%] h-[100%] border border-[#01193D] bg-white text-[#01193D] absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[700] text-[20px]">
 
                             <div>
@@ -117,7 +118,7 @@ const WhatWeDid = () => {
                     </div>
                 </div>
 
-                <div className="w-[55%] h-[100%] relative">
+                <div className="lg:w-[55%] sm:w-[90%] sm:mx-auto h-[100%] relative">
                     <Image
                         src="/whatwedid.svg"
                         alt="what we did picture"

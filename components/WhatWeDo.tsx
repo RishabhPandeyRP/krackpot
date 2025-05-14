@@ -91,7 +91,7 @@ const WhatWeDo = () => {
                 ))}
             </div>
 
-            <div className="w-[100%] h-[35%] flex items-center gap-[4%] relative z-10 rotate-[2deg] origin-top-left">
+            <div className="w-[100%] lg:h-[35%] sm:h-auto flex items-center gap-[4%] relative z-10 rotate-[2deg] origin-top-left lg:flex-row sm:flex-col sm:gap-20">
                 <div className="w-[60%] aspect-[5/3] relative z-20 border-0 border-amber-700">
                     <Image
                         src={"/whatwedo.svg"}
@@ -101,7 +101,7 @@ const WhatWeDo = () => {
                     ></Image>
                 </div>
 
-                <div className="w-[30%] h-[100%] -mt-[7%]">
+                <div className="lg:w-[30%] sm:w-[85%] sm:mx-auto h-[100%] lg:-mt-[7%] ">
                     <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">
                         What We Do
                     </div>

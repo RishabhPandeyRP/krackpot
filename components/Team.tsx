@@ -37,8 +37,10 @@ const AngledLine = ({
 )
 
 const Team = () => {
+
+    const imgData = ["/an.png", "/kg.png", "/sushmita.png", "/tanya.png"]
     return (
-        <div className="w-[100%] h-[1400px] border-0 border-green-500 bg-white relative -rotate-[2deg] origin-top-left">
+        <div className="w-[100%] lg:h-[1400px] sm:h-auto border-0 border-green-500 bg-white relative -rotate-[2deg] origin-top-left">
 
             <AngledLine></AngledLine>
 
@@ -70,13 +72,13 @@ const Team = () => {
                 ))}
             </div>
 
-            <div className="w-[100%] h-[700px] flex flex-col border-0 border-blue-500 rotate-[2deg] origin-top-left">
-                <div className="w-[100%] font-auster text-shadow text-stroke font-[700] text-[90px] text-[#DE9400] leading-28 px-[5%] my-[0.5%]">
+            <div className="w-[100%] lg:h-[700px] sm:h-auto flex flex-col border-0 border-blue-500 rotate-[2deg] origin-top-left">
+                <div className="w-[100%] font-auster text-shadow text-stroke font-[700] lg:text-[90px] sm:text-[70px] text-[#DE9400] leading-28 px-[5%] my-[0.5%]">
                     Who We Are
                 </div>
 
-                <div className="w-[100%] h-[100%] flex justify-between px-[5%]">
-                    <div className="w-[35%] relative border-0 border-red-500">
+                <div className="w-[100%] lg:h-[100%] sm:h-auto flex lg:flex-row sm:flex-col justify-between px-[5%]">
+                    <div className="lg:w-[35%] sm:w-[50%] lg:h-[100%] sm:h-[500px] sm:mx-auto  relative border-0 border-red-500">
                         <Image
                             src={"/whoWeAreImage.svg"}
                             alt=""
@@ -84,14 +86,15 @@ const Team = () => {
                         ></Image>
                     </div>
 
-                    <div className="w-[65%] border-0 border-red-500 mt-[2%] relative">
-                        <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">CReATiNG INSPIRATiON</div>
-                        <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28 absolute right-0 -mt-[5%]">WiTH CReATiVE SoLUTiONS</div>
+                    <div className="lg:w-[65%] sm:w-[95%] sm:mx-auto border-0 border-red-500 mt-[2%] relative sm:h-[600px] lg:h-auto">
+
+                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] sm:text-[50px] text-[#DE9400] lg:w-fit sm:w-[100%] leading-28">CReATiNG INSPIRATiON</div>
+                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[65px] sm:text-[50px] text-[#DE9400] lg:w-fit sm:w-[100%] leading-28 absolute right-0 -mt-[5%] ">WiTH CReATiVE SoLUTiONS</div>
 
 
                         <div className="font-auster font-[600] text-[25px] text-[#01193D] w-[90%] text-justify absolute right-0 mt-[7%]">{`${"We (designers) are crazy, think differently, always think or see things unconventionally, we see designs created in our mind when client talks about their brief, as crazy as we at times see a 3D imagery in front of our eyes of the end product in motion when client describes their thought."}`}</div>
 
-                        <div className="absolute right-0 top-[60%] flex flex-col justify-end items-end">
+                        <div className="absolute right-0 lg:top-[60%] sm:bottom-0 flex flex-col justify-end items-end border-0 border-red-500">
                             <div className="font-auster text-shadow text-stroke font-[600] text-[80px] text-[#DE9400] w-fit leading-28 mt-5">ViSION</div>
                             <div className="font-auster font-[600] text-[25px] text-[#01193D] w-fit text-justify">Our vision is to create a visual output of a thought or an idea.</div>
                         </div>
@@ -99,9 +102,24 @@ const Team = () => {
                 </div>
             </div>
 
-            <div className="w-[100%] h-[700px] flex flex-col border-0 border-blue-500 rotate-[2deg] origin-top-left">
+            <div className="w-[100%] lg:h-[700px] sm:h-auto  flex flex-col border-0 border-blue-500 rotate-[2deg] origin-top-left sm:py-20 lg:sm-0">
                 <div className="w-[100%] font-auster text-shadow text-stroke font-[700] text-[90px] text-[#DE9400] leading-28 px-[5%] my-[1%] text-center">
                     The Team
+                </div>
+
+                <div className="w-[100%] lg:h-[400px] sm:h-auto border-0 border-red-500 flex justify-between px-[3%] lg:flex-row sm:flex-col sm:gap-20 lg:gap-0">
+                    {
+                        imgData.map((item,index)=>(
+                            <Image
+                            src={item}
+                            alt="team image"
+                            width={300}
+                            height={100}
+                            key={index}
+                            className={`object-contain sm:mx-auto ${index%2 != 0 ? "scale-110 lg:mt-[10%]":""}`}
+                            ></Image>
+                        ))
+                    }
                 </div>
             </div>
         </div>

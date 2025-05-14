@@ -33,7 +33,7 @@ const Footer = () => {
                 ))}
             </div>
 
-            <div className="w-[100%] flex justify-between px-[5%] relative z-10">
+            {/* <div className="w-[100%] flex justify-between px-[5%] relative z-10">
 
                 <div className="flex flex-col">
                     <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Find Us</div>
@@ -90,9 +90,68 @@ const Footer = () => {
                         }
                     </div>
                 </div>
+            </div> */}
+
+            <div className="w-[100%] flex flex-col md:flex-row justify-between px-[5%] gap-10 md:gap-0 relative z-10">
+
+                <div className="flex flex-col items-start md:items-start">
+                    <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Find Us</div>
+                    <div className="font-auster font-[600] text-[18px] text-[#01193D] w-fit">Goregaon (E), Mumbai - 400063</div>
+                </div>
+
+                <div className="flex flex-col items-start md:items-start">
+                    <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Important Links</div>
+
+                    <div className="flex gap-5">
+                        <ul className="flex flex-col font-auster font-[600] text-[18px] text-[#01193D] w-fit">
+                            {
+                                impLinks1.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))
+                            }
+                        </ul>
+
+                        <ul className="flex flex-col font-auster font-[600] text-[18px] text-[#01193D] w-fit">
+                            {
+                                impLinks2.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="flex flex-col items-start md:items-start">
+                    <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Connect Us</div>
+                    <ul className="font-auster font-[600] text-[18px] text-[#01193D] w-fit">
+                        {
+                            connect.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))
+                        }
+                    </ul>
+                </div>
+
+                <div className="flex flex-col items-start md:items-start">
+                    <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Follow Us</div>
+                    <div className="w-full flex justify-around md:justify-start gap-4">
+                        {
+                            icons.map((item, index) => (
+                                <Image
+                                    src={item}
+                                    alt="icon"
+                                    width={40}
+                                    height={40}
+                                    key={index}
+                                />
+                            ))
+                        }
+                    </div>
+                </div>
             </div>
 
-            <div className="font-auster font-[600] text-[15px] text-[#01193D] text-center relative z-10">
+
+            <div className="font-auster font-[600] lg:text-[15px] sm:text-[8px] text-[#01193D] text-center relative z-10">
                 © M/s Krackpot Designs and Digital solutions 2025. All rights reserved
             </div>
         </div>
