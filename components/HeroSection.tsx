@@ -1,7 +1,8 @@
 
-
+"use client"
 import React from "react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 
 const AngledLine = ({
@@ -42,6 +43,7 @@ const AngledLine = ({
 
 
 const HeroSection = () => {
+    const router = useRouter()
     return (
         <div className="w-full lg:h-[800px] sm:h-auto relative overflow-hidden px-[5%]  border-0 border-green-500 flex bg-white lg:flex-row sm:flex-col justify-between items-center sm:gap-5">
 
@@ -95,7 +97,7 @@ const HeroSection = () => {
                 {/* Button */}
                 <div>
                     <div className="w-[250px] h-[50px] border-0 border-[#01193D] relative bg-[#01193D]">
-                        <button className="w-full h-full border border-[#01193D] bg-white absolute bottom-2 left-1 flex justify-center items-center gap-[8%] text-[#01193D] px-1 cursor-pointer">
+                        <button className="w-full h-full border border-[#01193D] bg-white absolute bottom-2 left-1 flex justify-center items-center gap-[8%] text-[#01193D] px-1 cursor-pointer" onClick={()=>router.push("/all-works")}>
                             <div className="font-[700] text-[22px]">view our work</div>
                             <div className="relative w-[20%] h-full">
                                 <Image

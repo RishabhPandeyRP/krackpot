@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react"
 import Image from "next/image"
+import Link from "next/link";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -14,12 +15,14 @@ const Header = () => {
                     <div className="w-[100%] h-[100%] border border-[#01193D] rounded-bl-lg rounded-br-lg relative">
                         <div className="w-[100%] h-[100%] bg-[#01193D] border border-[#01193D] rounded-bl-lg rounded-br-lg absolute bottom-1 left-1 py-3">
                             <div className="relative w-full h-full">
+                                <Link href={"/"}>
                                 <Image
                                     src="/logoKrackpot.svg"
                                     alt="Profile picture"
                                     fill
                                     className="rounded-bl-lg rounded-br-lg object-contain"
                                 />
+                                </Link>
                             </div>
                         </div>
                     </div>
