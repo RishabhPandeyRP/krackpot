@@ -9,8 +9,8 @@ const Header = () => {
     const icons = ["/Linkedin (1).svg", "/Meta.svg", "/Insta (1).svg"]
 
     return (
-        <div className="w-[100%] h-[120px] bg-[#e5e5f4] relative">
-            <div className="w-[90%] h-[120px] border-0 border-amber-900 mx-auto flex justify-between">
+        <div className="w-[100%] h-[110px] bg-[#e5e5f4] relative">
+            <div className="w-[90%] h-[110px] border-0 border-amber-900 mx-auto flex justify-between">
                 <div className="w-[20%] h-[100%] border-0 border-red-500">
                     <div className="w-[100%] h-[100%] border border-[#01193D] rounded-bl-lg rounded-br-lg relative">
                         <div className="w-[100%] h-[100%] bg-[#01193D] border border-[#01193D] rounded-bl-lg rounded-br-lg absolute bottom-1 left-1 py-3">

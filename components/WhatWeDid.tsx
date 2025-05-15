@@ -67,11 +67,28 @@ const WhatWeDid = () => {
     const router = useRouter()
 
     return (
-        <div className="w-[100%] min-h-[1750px] h-auto border-0 border-red-500 bg-white relative -rotate-[2deg] origin-top-left flex flex-col sm:gap-[100px] lg:gap-0 sm:py-7 lg:py-0">
+        <div className="w-[100%] min-h-[1750px] h-auto border-0 border-red-500 bg-white relative flex flex-col sm:gap-[100px] lg:gap-0 sm:py-7 lg:py-0">
 
-            <AngledLine></AngledLine>
+            {/* <AngledLine></AngledLine> */}
 
-            <div className="absolute inset-0 rotate-[2deg] origin-top-left">
+            <div className="absolute inset-0">
+                {/* Horizontal lines */}
+                {Array.from({ length: 9 }).map((_, index) => (
+                    <div
+                        key={`h-${index}`}
+                        className="absolute w-full border-t border-[#e2e4ee]"
+                        style={{ top: `${(index + 1) * 12.5}%` }}
+                    ></div>
+                ))}
+
+                {/* Vertical lines */}
+                {Array.from({ length: 9 }).map((_, index) => (
+                    <div
+                        key={`v-${index}`}
+                        className="absolute h-full border-l border-[#e2e4ee]"
+                        style={{ left: `${(index + 1) * 12.5}%` }}
+                    ></div>
+                ))}
                 {/* Horizontal lines of dots */}
                 {Array.from({ length: 9 }).map((_, i) => (
                     <div
@@ -97,7 +114,7 @@ const WhatWeDid = () => {
                 ))}
             </div>
 
-            <div className="w-[100%] lg:h-[500px] sm:h-[650px] flex border-0 border-red-500 rotate-[2deg] origin-top-left lg:flex-row sm:flex-col sm:gap-[10%]">
+            <div className="w-[100%] lg:h-[500px] sm:h-[650px] flex border-0 border-red-500 lg:flex-row sm:flex-col sm:gap-[10%] z-10 relative">
                 <div className="lg:w-[45%] sm:w-[80%] sm:mx-auto h-[100%] border-0 border-red-500 px-[7%]">
                     <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] sm:text-[65px] text-[#DE9400] w-fit leading-28">What We Did</div>
 
@@ -132,7 +149,7 @@ const WhatWeDid = () => {
 
             </div>
 
-            <div className="w-full h-[1100px] relative border-0 border-red-500 rotate-[2deg] origin-top-left">
+            <div className="w-full h-[1100px] relative border-0 border-red-500">
                 <div className="w-full h-[90%] overflow-hidden px-[2%] relative mt-[4%]">
                     <div
                         className="flex transition-transform duration-700 ease-in-out"

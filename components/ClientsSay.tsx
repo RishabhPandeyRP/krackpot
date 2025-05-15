@@ -78,10 +78,28 @@ const ClientsSay = () => {
     )
 
     return (
-        <div className="w-[100%] min-h-[1400px] h-auto border-0 border-red-500 bg-white relative -rotate-[2deg] origin-top-left">
-            <AngledLine></AngledLine>
+        <div className="w-[100%] min-h-[1400px] h-auto border-0 border-red-500 bg-white relative">
+            {/* <AngledLine></AngledLine> */}
 
-            <div className="absolute inset-0 rotate-[2deg] origin-top-left">
+            <div className="absolute inset-0 ">
+                {/* Horizontal lines */}
+                {Array.from({ length: 10 }).map((_, index) => (
+                    <div
+                        key={`h-${index}`}
+                        className="absolute w-full border-t border-[#e2e4ee]"
+                        style={{ top: `${(index + 1) * 10}%` }}
+                    ></div>
+                ))}
+
+                {/* Vertical lines */}
+                {Array.from({ length: 10 }).map((_, index) => (
+                    <div
+                        key={`v-${index}`}
+                        className="absolute h-full border-l border-[#e2e4ee]"
+                        style={{ left: `${(index + 1) * 10}%` }}
+                    ></div>
+                ))}
+
                 {/* Horizontal lines of dots */}
                 {Array.from({ length: 10 }).map((_, i) => (
                     <div
@@ -106,11 +124,12 @@ const ClientsSay = () => {
                     </div>
                 ))}
             </div>
-            <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28 px-[5%] py-[5%] rotate-[2deg] origin-top-left">
+
+            <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28 px-[5%] py-[5%] z-10 relative ">
                 What our clients Say
             </div>
 
-            <div className="w-full h-[1000px] relative border-0 border-red-500 rotate-[2deg] origin-top-left">
+            <div className="w-full h-[1000px] border-0 border-red-500 z-10 relative ">
                 <div className="w-full min-h-[80%] h-auto px-[2%] relative mt-[0%] border-0 border-green-500 overflow-hidden">
                     <div
                         className="flex items-center transition-transform duration-700 ease-in-out"

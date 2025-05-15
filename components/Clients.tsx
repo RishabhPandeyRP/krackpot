@@ -90,13 +90,13 @@ const Clients = () => {
     )
 
     return (
-        <div className="w-full lg:h-[1100px] sm:h-[1150px] border-0 border-b-blue-700 relative overflow-hidden -rotate-[2deg] origin-top-left flex flex-col sm:gap-[10%] lg:gap-[0%]">
+        <div className="w-full lg:h-[1100px] sm:h-[1150px] border-0 border-b-blue-700 relative overflow-hidden  flex flex-col sm:gap-[10%] lg:gap-[0%] bg-[#efeff8]">
             
-            <AngledLine></AngledLine>
+            {/* <AngledLine></AngledLine> */}
 
-            {/* <div className="absolute -bottom-15 left-0 w-full h-[80px] bg-white -rotate-[2deg] origin-top-left z-10" /> */}
+           
             
-            <div className="absolute inset-0 z-0 rotate-[2deg] origin-top-left">
+            <div className="absolute inset-0 z-0 t">
                 {/* Horizontal lines */}
                 {Array.from({ length: 9 }).map((_, index) => (
                     <div
@@ -110,7 +110,7 @@ const Clients = () => {
                 {Array.from({ length: 9 }).map((_, index) => (
                     <div
                         key={`v-${index}`}
-                        className="absolute h-full border-l border-[#e2e4ee] rotate-[2deg] origin-top-left"
+                        className="absolute h-full border-l border-[#e2e4ee]"
                         style={{ left: `${index * 12.5}%` }}
                     ></div>
                 ))}
@@ -120,7 +120,7 @@ const Clients = () => {
                     Array.from({ length: 9 }).map((_, j) => (
                         <div
                             key={`dot-${i}-${j}`}
-                            className="absolute w-1 h-1 bg-[#9098af] rounded-full rotate-[2deg] origin-top-left"
+                            className="absolute w-1 h-1 bg-[#9098af] rounded-full"
                             style={{
                                 top: `${i * 12.5}%`,
                                 left: `${j * 12.5}%`,
@@ -131,7 +131,7 @@ const Clients = () => {
                 ))}
             </div>
 
-            <div className="w-full lg:h-[550px] sm:h-auto border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 rotate-[2deg] origin-top-left">
+            <div className="w-full lg:h-[550px] sm:h-auto border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 ">
                 <div className="flex flex-col w-full h-fit px-[5%] my-[1%]">
                     <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] sm:text-[65px] text-[#DE9400] w-fit leading-28">
                         Our Clients
@@ -161,7 +161,7 @@ const Clients = () => {
                 </div>
             </div>
 
-            <div className="w-full lg:h-[550px] sm:h-auto border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 rotate-[2deg] origin-top-left">
+            <div className="w-full lg:h-[550px] sm:h-auto border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 ">
                 <div className="flex flex-col w-full h-fit px-[5%] my-[1%] items-end">
                     <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] sm:text-[65px] text-[#DE9400] w-fit leading-28">
                         Agencies Joined Hands with us

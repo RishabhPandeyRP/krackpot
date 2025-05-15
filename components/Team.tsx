@@ -40,13 +40,31 @@ const Team = () => {
 
     const imgData = ["/an.png", "/kg.png", "/sushmita.png", "/tanya.png"]
     return (
-        <div className="w-[100%] lg:h-[1400px] sm:h-auto border-0 border-green-500 bg-white relative -rotate-[2deg] origin-top-left">
+        <div className="w-[100%] lg:h-[1400px] sm:h-auto border-0 border-green-500 bg-white relative">
 
-            <AngledLine></AngledLine>
+            {/* <AngledLine></AngledLine> */}
 
-            {/* <div className="absolute -bottom-0 left-0 w-full h-[80px] bg-white -rotate-[2deg] origin-top-left z-10" /> */}
+            
 
-            <div className="absolute inset-0 rotate-[2deg] origin-top-left">
+            <div className="absolute inset-0 z-0">
+                {/* Horizontal lines */}
+                {Array.from({ length: 8 }).map((_, index) => (
+                    <div
+                        key={`h-${index}`}
+                        className="absolute w-full border-t border-[#e2e4ee]"
+                        style={{ top: `${(index + 1) * 12.5}%` }}
+                    ></div>
+                ))}
+
+                {/* Vertical lines */}
+                {Array.from({ length: 8 }).map((_, index) => (
+                    <div
+                        key={`v-${index}`}
+                        className="absolute h-full border-l border-[#e2e4ee]"
+                        style={{ left: `${(index + 1) * 12.5}%` }}
+                    ></div>
+                ))}
+
                 {/* Horizontal lines of dots */}
                 {Array.from({ length: 8 }).map((_, i) => (
                     <div
@@ -72,7 +90,7 @@ const Team = () => {
                 ))}
             </div>
 
-            <div className="w-[100%] lg:h-[700px] sm:h-auto flex flex-col border-0 border-blue-500 rotate-[2deg] origin-top-left">
+            <div className="w-[100%] lg:h-[700px] sm:h-auto flex flex-col border-0 border-blue-500 z-10 relative ">
                 <div className="w-[100%] font-auster text-shadow text-stroke font-[700] lg:text-[90px] sm:text-[70px] text-[#DE9400] leading-28 px-[5%] my-[0.5%]">
                     Who We Are
                 </div>
@@ -102,7 +120,7 @@ const Team = () => {
                 </div>
             </div>
 
-            <div className="w-[100%] lg:h-[700px] sm:h-auto  flex flex-col border-0 border-blue-500 rotate-[2deg] origin-top-left sm:py-20 lg:sm-0">
+            <div className="w-[100%] lg:h-[700px] sm:h-auto  flex flex-col border-0 border-blue-500 sm:py-20 lg:sm-0 z-10 relative">
                 <div className="w-[100%] font-auster text-shadow text-stroke font-[700] text-[90px] text-[#DE9400] leading-28 px-[5%] my-[1%] text-center">
                     The Team
                 </div>

@@ -52,11 +52,11 @@ const WhatWeDo = () => {
     )
 
     return (
-        <div className="w-[100%] min-h-[1300px] h-auto bg-white pt-[10%] relative overflow-hidden -rotate-[2deg] origin-top-left border-0 border-red-500">
+        <div className="w-[100%] min-h-[1300px] h-auto pt-[10%] relative overflow-hidden border-0 border-red-500 bg-[#efeff8]">
 
-            <AngledLine></AngledLine>
+            {/* <AngledLine></AngledLine> */}
 
-            <div className="absolute inset-0 z-0 rotate-[2deg] origin-top-left">
+            <div className="absolute inset-0 z-0 ">
                 {/* Horizontal lines */}
                 {Array.from({ length: 9 }).map((_, index) => (
                     <div
@@ -91,7 +91,7 @@ const WhatWeDo = () => {
                 ))}
             </div>
 
-            <div className="w-[100%] lg:h-[35%] sm:h-auto flex items-center gap-[4%] relative z-10 rotate-[2deg] origin-top-left lg:flex-row sm:flex-col sm:gap-20">
+            <div className="w-[100%] lg:h-[35%] sm:h-auto flex items-center gap-[4%] relative z-10 lg:flex-row sm:flex-col sm:gap-20">
                 <div className="w-[60%] aspect-[5/3] relative z-20 border-0 border-amber-700">
                     <Image
                         src={"/whatwedo.svg"}
@@ -112,7 +112,7 @@ const WhatWeDo = () => {
                 </div>
             </div>
 
-            <div className="w-[100%] h-fit border-0 border-red-500 mt-[10%] relative z-10 rotate-[2deg] origin-top-left">
+            <div className="w-[100%] h-fit border-0 border-red-500 mt-[10%] relative z-10 ">
                 {
                     data.map((data , index) => (
                         <DropDown data={data} key={index}></DropDown>
