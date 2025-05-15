@@ -91,7 +91,7 @@ const Team = () => {
             </div>
 
             <div className="w-[100%] lg:h-[700px] sm:h-auto flex flex-col border-0 border-blue-500 z-10 relative ">
-                <div className="w-[100%] font-auster text-shadow text-stroke font-[700] lg:text-[90px] sm:text-[70px] text-[#DE9400] leading-28 px-[5%] my-[0.5%]">
+                <div className="w-[100%] font-auster text-shadow text-stroke font-[700] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[#DE9400] leading-28 px-[5%] my-[0.5%]">
                     Who We Are
                 </div>
 
@@ -106,22 +106,22 @@ const Team = () => {
 
                     <div className="lg:w-[65%] sm:w-[95%] sm:mx-auto border-0 border-red-500 mt-[2%] relative sm:h-[600px] lg:h-auto">
 
-                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] sm:text-[50px] text-[#DE9400] lg:w-fit sm:w-[100%] leading-28">CReATiNG INSPIRATiON</div>
-                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[65px] sm:text-[50px] text-[#DE9400] lg:w-fit sm:w-[100%] leading-28 absolute right-0 -mt-[5%] ">WiTH CReATiVE SoLUTiONS</div>
+                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] md:text-[50px] sm:text-[40px] text-[#DE9400] lg:w-fit sm:w-[100%] leading-28">CReATiNG INSPIRATiON</div>
+                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] md:text-[50px] sm:text-[40px] text-[#DE9400] lg:w-fit sm:w-[100%] leading-28 absolute right-0 -mt-[5%] ">WiTH CReATiVE SoLUTiONS</div>
 
 
-                        <div className="font-auster font-[600] text-[25px] text-[#01193D] w-[90%] text-justify absolute right-0 mt-[7%]">{`${"We (designers) are crazy, think differently, always think or see things unconventionally, we see designs created in our mind when client talks about their brief, as crazy as we at times see a 3D imagery in front of our eyes of the end product in motion when client describes their thought."}`}</div>
+                        <div className="font-auster font-[600] lg:text-[25px] md:text-[20px] sm:text-[15px] text-[#01193D] w-[90%] text-justify absolute right-0 mt-[7%]">{`${"We (designers) are crazy, think differently, always think or see things unconventionally, we see designs created in our mind when client talks about their brief, as crazy as we at times see a 3D imagery in front of our eyes of the end product in motion when client describes their thought."}`}</div>
 
-                        <div className="absolute right-0 lg:top-[60%] sm:bottom-0 flex flex-col justify-end items-end border-0 border-red-500">
-                            <div className="font-auster text-shadow text-stroke font-[600] text-[80px] text-[#DE9400] w-fit leading-28 mt-5">ViSION</div>
-                            <div className="font-auster font-[600] text-[25px] text-[#01193D] w-fit text-justify">Our vision is to create a visual output of a thought or an idea.</div>
+                        <div className="absolute right-0 lg:top-[60%] md:bottom-10 sm:bottom-0 flex flex-col justify-end items-end border-0 border-red-500">
+                            <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] md:text-[50px] sm:text-[40px] text-[#DE9400] w-fit leading-28 mt-5">ViSION</div>
+                            <div className="font-auster font-[600] lg:text-[25px] md:text-[20px] sm:text-[15px] text-[#01193D] w-fit text-justify">Our vision is to create a visual output of a thought or an idea.</div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div className="w-[100%] lg:h-[700px] sm:h-auto  flex flex-col border-0 border-blue-500 sm:py-20 lg:sm-0 z-10 relative">
-                <div className="w-[100%] font-auster text-shadow text-stroke font-[700] text-[90px] text-[#DE9400] leading-28 px-[5%] my-[1%] text-center">
+                <div className="w-[100%] font-auster text-shadow text-stroke font-[700] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[#DE9400] leading-28 px-[5%] my-[1%] text-center">
                     The Team
                 </div>
 

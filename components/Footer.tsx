@@ -92,7 +92,7 @@ const Footer = () => {
                 </div>
             </div> */}
 
-            <div className="w-[100%] flex flex-col md:flex-row justify-between px-[5%] gap-10 md:gap-0 relative z-10">
+            <div className="w-[100%] flex flex-col lg:flex-row justify-between px-[5%] gap-10 md:gap-0 relative z-10">
 
                 <div className="flex flex-col items-start md:items-start">
                     <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Find Us</div>

@@ -102,11 +102,11 @@ const WhatWeDo = () => {
                 </div>
 
                 <div className="lg:w-[30%] sm:w-[85%] sm:mx-auto h-[100%] lg:-mt-[7%] ">
-                    <div className="font-auster text-shadow text-stroke font-[600] text-[70px] text-[#DE9400] w-fit leading-28">
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[#DE9400] w-fit leading-28">
                         What We Do
                     </div>
 
-                    <div className="font-auster font-[600] text-[25px] text-[#01193D] w-fit">
+                    <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[#01193D] w-fit">
                         By offering a 360-degree approach, we provide our clients with a one-stop shop for all their marketing needs, ensuring a cohesive and integrated brand experience.
                     </div>
                 </div>

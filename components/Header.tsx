@@ -5,7 +5,29 @@ import Link from "next/link";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const dataArr = ["ABOUT", "WORK", "SERVICES", "CLIENTS", "CASE STUDIES", "CONTACT", "PRIVACY POLICY"]
+
+    const dataArr = [{
+        name: "ABOUT",
+        link: "#"
+    }, {
+        name: "WORK",
+        link: "/all-works"
+    }, {
+        name: "SERVICES",
+        link: "#"
+    }, {
+        name: "CLIENTS",
+        link: "#clients"
+    }, {
+        name: "CASE STUDIES",
+        link: "/all-projects"
+    }, {
+        name: "CONTACT",
+        link: "#contact"
+    }, {
+        name: "PRIVACY POLICY",
+        link: "#"
+    }]
     const icons = ["/Linkedin (1).svg", "/Meta.svg", "/Insta (1).svg"]
 
     return (
@@ -16,12 +38,12 @@ const Header = () => {
                         <div className="w-[100%] h-[100%] bg-[#01193D] border border-[#01193D] rounded-bl-lg rounded-br-lg absolute bottom-1 left-1 py-3">
                             <div className="relative w-full h-full">
                                 <Link href={"/"}>
-                                <Image
-                                    src="/logoKrackpot.svg"
-                                    alt="Profile picture"
-                                    fill
-                                    className="rounded-bl-lg rounded-br-lg object-contain"
-                                />
+                                    <Image
+                                        src="/logoKrackpot.svg"
+                                        alt="Profile picture"
+                                        fill
+                                        className="rounded-bl-lg rounded-br-lg object-contain"
+                                    />
                                 </Link>
                             </div>
                         </div>
@@ -60,20 +82,22 @@ const Header = () => {
             {isOpen && <div className="absolute top-[100%] w-[100%] h-auto border-0 border-red-500 z-20 flex bg-[#DFDFF1] px-[5%] pb-3">
                 <div className="w-[55%] h-auto relative border-0 border-red-500 flex justify-center items-center">
                     <Image
-                    src={"/blue_logo 1.svg"}
-                    alt="blue icon"
-                    width={500}
-                    height={500}
-                    className="object-contain"
+                        src={"/blue_logo 1.svg"}
+                        alt="blue icon"
+                        width={500}
+                        height={500}
+                        className="object-contain"
                     ></Image>
                 </div>
                 <div className="flex flex-col w-[40%] justify-end items-end">
-                    <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Menu</div>
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[50px] sm:text-[45px] text-[#DE9400] w-fit leading-28">Menu</div>
                     {
                         dataArr.map((item, index) => (
-                            <div className="w-fit font-auster font-[900] text-[35px] text-[#01193D]" key={index}>
-                                {item}
-                            </div>
+                            <Link href={item.link} onClick={() => setIsOpen(false)} key={index}>
+                                <div className="w-fit font-auster font-[900] lg:text-[35px] sm:text-[25px] text-[#01193D]" key={index}>
+                                    {item.name}
+                                </div>
+                            </Link>
                         ))
                     }
 

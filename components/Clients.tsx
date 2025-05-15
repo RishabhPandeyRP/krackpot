@@ -133,7 +133,7 @@ const Clients = () => {
 
             <div className="w-full lg:h-[550px] sm:h-auto border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 ">
                 <div className="flex flex-col w-full h-fit px-[5%] my-[1%]">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] sm:text-[65px] text-[#DE9400] w-fit leading-28">
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[#DE9400] w-fit leading-28">
                         Our Clients
                     </div>
                     <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[#01193D] w-fit leading-28 -mt-[50px]">
@@ -163,7 +163,7 @@ const Clients = () => {
 
             <div className="w-full lg:h-[550px] sm:h-auto border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 ">
                 <div className="flex flex-col w-full h-fit px-[5%] my-[1%] items-end">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] sm:text-[65px] text-[#DE9400] w-fit leading-28">
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[45px] text-[#DE9400] w-fit leading-28">
                         Agencies Joined Hands with us
                     </div>
                     <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[#01193D] w-fit leading-28 -mt-[50px]">

@@ -27,16 +27,11 @@
     -webkit-text-fill-color: currentColor; /* Or transparent for just stroke */
   }
 
- 
-
-
   .text-stroke-lg {
     -webkit-text-stroke: 2px black;
     color: white;
   }
 }
-
-
 
 @theme inline {
   --color-background: var(--background);
@@ -51,6 +46,11 @@
     --foreground: #ededed;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   background: var(--background);

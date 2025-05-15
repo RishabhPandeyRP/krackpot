@@ -86,8 +86,8 @@ const HeroSection = () => {
 
 
             {/* 🔷 Main Content */}
-            <div className="lg:w-[55%] sm:w-[75%] h-[65%]  z-10 border-0 border-red-500 flex flex-col lg:gap-[9%] sm:gap-[15%]">
-                <div className="font-auster text-shadow text-stroke font-[600] lg:text-[90px] sm:text-[80px] text-[#DE9400] w-full leading-tight">
+            <div className="lg:w-[55%] sm:w-[75%] h-[65%]  z-10 border-0 border-red-500 flex flex-col lg:gap-[9%] sm:gap-10 sm:pt-[10%]">
+                <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[#DE9400] w-full leading-tight">
                     CREaTIVE MiNDS <br />
                     THaT BRiNGS <br />
                     BRaNDS To <br />
@@ -96,9 +96,9 @@ const HeroSection = () => {
 
                 {/* Button */}
                 <div>
-                    <div className="w-[250px] h-[50px] border-0 border-[#01193D] relative bg-[#01193D]">
+                    <div className="lg:w-[250px] md:w-[200px] sm:w-[150px] lg:h-[50px] sm:h-[45px] border-0 border-[#01193D] relative bg-[#01193D]">
                         <button className="w-full h-full border border-[#01193D] bg-white absolute bottom-2 left-1 flex justify-center items-center gap-[8%] text-[#01193D] px-1 cursor-pointer" onClick={()=>router.push("/all-works")}>
-                            <div className="font-[700] text-[22px]">view our work</div>
+                            <div className="font-[700] lg:text-[22px] sm:text-[20px]">view our work</div>
                             <div className="relative w-[20%] h-full">
                                 <Image
                                     src="/enter_button 1.svg"

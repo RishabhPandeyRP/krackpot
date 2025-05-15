@@ -179,7 +179,7 @@ const ContactUs = () => {
                 priority
             />
             <div className="lg:absolute lg:w-[45%] sm:mx-auto sm:w-[65%] h-[1100px] border-0 border-red-500 flex flex-col items-center z-10 lg:top-[20%] lg:left-[27%] sm:left-0 px-[5%] gap-[2%]">
-                <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] sm:text-[65px] text-[#DE9400] text-center leading-tight w-[50%]">
+                <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[#DE9400] text-center leading-tight w-[50%]">
                     Let's Get Started
                 </div>
 
@@ -243,7 +243,7 @@ const ContactUs = () => {
                     </div>
 
                     <div className="w-[50%] h-[50px] border border-[#01193D] mx-auto relative mt-[6%] bg-[#01193D]">
-                        <button type="submit" className="w-[100%] h-[100%] border border-[#01193D] bg-white text-[#01193D] absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[700] text-[20px]">
+                        <button type="submit" className="w-[100%] h-[100%] border border-[#01193D] bg-white text-[#01193D] absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[700] lg:text-[20px] md:text-[15px] sm:text-[13px]">
                             <div>SUBMIT ENQUIRY</div>
                             <div className="relative w-[20%] h-full">
                                 <Image

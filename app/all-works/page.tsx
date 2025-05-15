@@ -34,12 +34,20 @@ const Works = () => {
 
     const scroll = (direction: "left" | "right") => {
         const maxIndex = data.length - 1;
-        if (direction === "left") {
-            setCurrentIndex((prev) => (prev > 0 ? prev - 1 : prev));
-        } else {
-            setCurrentIndex((prev) => (prev < maxIndex ? prev + 1 : prev));
-        }
+        setCurrentIndex((prev) => {
+            const newIndex = direction === "left"
+                ? (prev > 0 ? prev - 1 : prev)
+                : (prev < maxIndex ? prev + 1 : prev);
+    
+            // Scroll to top after state is updated
+            setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }, 0);
+    
+            return newIndex;
+        });
     };
+    
 
     return (
         <div className="w-[100%]  bg-white border-0 border-red-500 flex flex-col items-end overflow-hidden ">

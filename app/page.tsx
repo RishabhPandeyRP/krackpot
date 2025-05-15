@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Team from "@/components/Team";
 import Clients from "@/components/Clients";
@@ -14,11 +12,16 @@ export default function Home() {
       {/* <Header></Header> */}
       <HeroSection></HeroSection>
       <Team></Team>
+      <div id="clients">
       <Clients></Clients>
+      </div>
+      
       <WhatWeDid></WhatWeDid>
       <WhatWeDo></WhatWeDo>
       <ClientsSay></ClientsSay>
-      <ContactUs></ContactUs>
+      <div id="contact">
+        <ContactUs />
+      </div>
     </div>
   );
 }

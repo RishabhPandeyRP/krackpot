@@ -6,11 +6,13 @@ import { useRouter } from "next/navigation";
 const WhatWeDid = () => {
 
     const CardData = [{
+        slug:"Amazon_Prime_Video",
         image: "/wwdCard1.svg",
         heading: "Amazon Prime Video Banners",
         subheading: "We are passionate about delivering exceptional work that exceeds our clients' expectations."
     },
     {
+        slug:"FILA_India",
         image: "/wwdCard2.svg",
         heading: "Fila India",
         subheading: "We are passionate about delivering exceptional work that exceeds our clients' expectations."
@@ -116,7 +118,7 @@ const WhatWeDid = () => {
 
             <div className="w-[100%] lg:h-[500px] sm:h-[650px] flex border-0 border-red-500 lg:flex-row sm:flex-col sm:gap-[10%] z-10 relative">
                 <div className="lg:w-[45%] sm:w-[80%] sm:mx-auto h-[100%] border-0 border-red-500 px-[7%]">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[70px] sm:text-[65px] text-[#DE9400] w-fit leading-28">What We Did</div>
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[#DE9400] w-fit leading-28">What We Did</div>
 
                     <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[#01193D] w-fit ">We are passionate about delivering exceptional work that exceeds our clients' expectations.</div>
 
@@ -158,7 +160,7 @@ const WhatWeDid = () => {
                         }}
                     >
                         {CardData.map((card, index) => (
-                            <div key={index} className="flex-shrink-0 w-[750px] mr-2">
+                            <div key={index} className="flex-shrink-0 w-[750px] mr-2 cursor-pointer" onClick={() => router.push(`/projects/${card.slug}`)}>
                                 <WWDCard data={card} />
                             </div>
                         ))}

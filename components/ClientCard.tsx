@@ -44,13 +44,13 @@ const ClientCard = ({ data, index }: {
                 ></Image>
 
 
-                <div className="w-[76%] h-fit mx-auto font-auster font-[500] text-[25px] text-[#01193D] text-center">
+                <div className="w-[76%] h-fit mx-auto font-auster font-[500] lg:text-[25px] sm:text-[20px] text-[#01193D] text-center">
                     {data.content}
                 </div>
 
                 <div className="w-[50%] h-auto absolute bottom-5 right-10 flex flex-col items-end">
-                    <div className="font-auster font-[600] text-[30px] text-[#01193D]">{data.name}</div>
-                    <div className="font-auster font-[400] text-[20px] text-[#01193D]">{data.post}</div>
+                    <div className="font-auster font-[600] lg:text-[30px] sm:text-[25px] text-[#01193D]">{data.name}</div>
+                    <div className="font-auster font-[400] lg:text-[20px] sm:text-[15px] text-[#01193D]">{data.post}</div>
 
                     <Image
                         src={data.logoLink}

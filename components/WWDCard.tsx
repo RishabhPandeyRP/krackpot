@@ -34,8 +34,9 @@ const WWDCard = ({ data }: {
                         </div>
                     </button>
                 </div>
+                
 
-                <div className="font-auster font-[600] text-[25px] text-[#01193D] w-fit">
+                <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[#01193D] w-fit">
                     {data.subheading}
                 </div>
             </div>

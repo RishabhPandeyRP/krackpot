@@ -7,7 +7,7 @@ const WorksCard = ({ item }: {
 }) => {
     return (
         <div className="w-screen flex-shrink-0  flex flex-col gap-3 border-0 border-blue-500 pb-28 pt-5">
-            <div className="font-auster text-shadow text-stroke font-[600] text-[60px] text-[#DE9400] w-[85%] mx-auto leading-28">
+            <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] sm:text-[40px] text-[#DE9400] w-[85%] mx-auto leading-28">
                 Works - {item.heading}
             </div>
 
