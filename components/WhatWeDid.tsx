@@ -2,6 +2,7 @@
 import Image from "next/image"
 import WWDCard from "./WWDCard"
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 const WhatWeDid = () => {
 
     const CardData = [{
@@ -63,6 +64,8 @@ const WhatWeDid = () => {
         </div>
     )
 
+    const router = useRouter()
+
     return (
         <div className="w-[100%] min-h-[1750px] h-auto border-0 border-red-500 bg-white relative -rotate-[2deg] origin-top-left flex flex-col sm:gap-[100px] lg:gap-0 sm:py-7 lg:py-0">
 
@@ -101,7 +104,7 @@ const WhatWeDid = () => {
                     <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[#01193D] w-fit ">We are passionate about delivering exceptional work that exceeds our clients' expectations.</div>
 
                     <div className="sm:w-[50%] lg:w-[60%] lg:h-[10%] sm:h-[15%] border border-[#01193D]  relative mt-[6%] bg-[#01193D]">
-                        <button className="w-[100%] h-[100%] border border-[#01193D] bg-white text-[#01193D] absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[700] text-[20px]">
+                        <button className="w-[100%] h-[100%] border border-[#01193D] bg-white text-[#01193D] absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[700] text-[20px] cursor-pointer" onClick={()=>router.push("/all-projects")}>
 
                             <div>
                                 view all projects
