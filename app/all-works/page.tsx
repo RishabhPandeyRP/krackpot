@@ -50,7 +50,7 @@ const Works = () => {
     
 
     return (
-        <div className="w-[100%]  bg-white border-0 border-red-500 flex flex-col items-end overflow-hidden ">
+        <div className="w-[100.1%]  bg-white border-0 border-red-500 flex flex-col items-end overflow-hidden mt-[110px]">
             
             
             <div className="w-full">

@@ -30,7 +30,7 @@ export default async function ProjectPage({ params }: PageProps) {
   if (!project) return notFound();
 
   return (
-    <div className="bg-white">
+    <div className="bg-white mt-[110px] w-[100.1%]">
       <ProjectsCard item={project} />
     </div>
   );

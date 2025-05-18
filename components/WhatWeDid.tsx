@@ -7,15 +7,21 @@ const WhatWeDid = () => {
 
     const CardData = [{
         slug:"Amazon_Prime_Video",
-        image: "/wwdCard1.svg",
+        image: "/wwdCard2.svg",
         heading: "Amazon Prime Video Banners",
         subheading: "We are passionate about delivering exceptional work that exceeds our clients' expectations."
     },
     {
         slug:"FILA_India",
-        image: "/wwdCard2.svg",
+        image: "/wwdCard1.svg",
         heading: "Fila India",
         subheading: "We are passionate about delivering exceptional work that exceeds our clients' expectations."
+    },{
+        slug:"Platinum",
+        image:"/wwdCard2.svg",
+        heading:"Platinum Connect",
+        subheading: "We are passionate about delivering exceptional work that exceeds our clients' expectations."
+
     }]
 
 
@@ -167,16 +173,16 @@ const WhatWeDid = () => {
                     </div>
                 </div>
 
-                <div className="absolute bottom-10 right-14 w-[13%] h-[55px] bg-[#01193D] flex justify-between items-center px-[1%]">
+                <div className="absolute bottom-10 right-14 w-[13%] h-[55px] bg-[#01193D] flex justify-between items-center px-[1%] ">
                     <button
                         onClick={() => scroll("left")}
-                        className="relative w-[50%] h-[50%]"
+                        className="relative w-[50%] h-[50%] cursor-pointer"
                     >
                         <Image src={"/left.svg"} alt="Left" fill />
                     </button>
                     <button
                         onClick={() => scroll("right")}
-                        className="relative w-[50%] h-[50%]"
+                        className="relative w-[50%] h-[50%] cursor-pointer"
                     >
                         <Image src={"/right.svg"} alt="Right" fill />
                     </button>

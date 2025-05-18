@@ -29,7 +29,7 @@ const Projects = () => {
     
 
     return (
-        <div className="w-[100%]  bg-white border-0 border-red-500 flex flex-col items-end overflow-hidden gap-10 relative">
+        <div className="w-[100.1%]  bg-white border-0 border-red-500 flex flex-col items-end overflow-hidden gap-10 relative mt-[110px]">
 
             <div className="absolute inset-0 z-0">
                 {/* Horizontal lines */}

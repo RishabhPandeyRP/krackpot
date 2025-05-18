@@ -8,7 +8,7 @@ export const projectData = [{
     logo: "/logo/logo_primevideo.png",
     images: ["/casestudies/cs_amazonprime01.png", "/casestudies/cs_amazonprime02.png", "/casestudies/cs_amazonprime03.png", "/casestudies/cs_amazonprime04.png", "/casestudies/cs_amazonprime05.png",]
 }, {
-    slug: "Platinum_Connect",
+    slug: "Platinum",
     heading: "Platinum Connect",
     content: "Platinum Connect; the virtual platform designed specially to give a seamless 24x7 secure access to the world of platinum jewellery. The platform aims at providing proven merchandise opportunities that have been instrumental in making platinum the fastest growth opportunity for manufacturer and retailer partners.",
     objective: "Platinum Guild India (PGI) aimed to create a virtual platform for their entire manufacturer, retailer and distributor community for a smooth online interaction with utmost security and privacy.",

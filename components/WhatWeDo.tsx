@@ -1,19 +1,235 @@
 import Image from "next/image"
 import DropDown from "./DropDown"
 const WhatWeDo = () => {
-    const data = [{
-        heading: "Design",
-        sub_headings: [{
-            heading: "Branding",
-            sub_headings: ["logo", "visual"]
-        }]
-    }, {
-        heading: "Design",
-        sub_headings: [{
-            heading: "Branding",
-            sub_headings: ["logo", "visual"]
-        }]
-    }]
+    const data = [
+        {
+            "heading": "Design",
+            "sub_headings": [
+                {
+                    "heading": "Branding",
+                    "sub_headings": [
+                        "Logo Design",
+                        "Visual Identity",
+                        "Brand Naming",
+                        "Brand Guidelines",
+                        "Stationery Design"
+                    ]
+                },
+                {
+                    "heading": "Advertising",
+                    "sub_headings": [
+                        "Print & Digital Billboards",
+                        "Print & Digital Transit Displays",
+                        "Print & Digital Bus Shelters",
+                        "Shopping Centers",
+                        "Public Spaces",
+                        "Airport Advertising",
+                        "Mall Advertising",
+                        "Cinema Advertising"
+                    ]
+                },
+                {
+                    "heading": "Graphic Design",
+                    "sub_headings": [
+                        "Brochure",
+                        "Catalogue",
+                        "Flyers",
+                        "Coffee Table Book",
+                        "Exhibition Display",
+                        "Standee",
+                        "Packaging Design",
+                        "Invites",
+                        "Reports",
+                        "Presentations",
+                        "Advertorials",
+                        "Infographics"
+                    ]
+                },
+                {
+                    "heading": "UX and UI Design",
+                    "sub_headings": [
+                        "App",
+                        "Website",
+                        "Wireframe",
+                        "Emailer",
+                        "Newsletter",
+                        "Usability Testing"
+                    ]
+                }
+            ]
+        },
+        {
+            heading: "Development",
+            sub_headings: [
+                {
+                    heading: "Website",
+                    sub_headings: [
+                        "E-commerce",
+                        "Shopify",
+                        "Custom coded",
+                        "No-code",
+                        "WebFlow Management Tools",
+                        "Dynamic Websites",
+                        "Responsive Designs",
+                        "Content Management"
+                    ]
+                },
+                {
+                    heading: "WebApp",
+                    sub_headings: [
+                        "Games",
+                        "Multiplayer mode",
+                        "Shopping Portals",
+                        "Dashboards",
+                        "OTT platform"
+                    ]
+                },
+                {
+                    heading: "App",
+                    sub_headings: [
+                        "Android Development",
+                        "iOS Development",
+                        "Native apps",
+                        "Flutter Apps"
+                    ]
+                },
+                {
+                    heading: "Customized Software",
+                    sub_headings: [
+                        "CRMs",
+                        "ERPs",
+                        "Dashboards"
+                    ]
+                },
+                {
+                    heading: "Post Development",
+                    sub_headings: [
+                        "Ongoing Maintenance & Support",
+                        "Organic Search Engine Optimization",
+                        "Web App Security",
+                        "PPC Campaign Management"
+                    ]
+                }
+            ]
+        },
+        {
+            heading: "Email Marketing",
+            sub_headings: [
+                {
+                    heading: "UI and UX Design",
+                    sub_headings: [
+                        "Welcome/Onboarding Emails",
+                        "Promotional Emails",
+                        "Transactional Emails",
+                        "Survey/Feedback Emails",
+                        "Abandoned Cart Emails",
+                        "Milestone Emails",
+                        "News Letters"
+                    ]
+                },
+                {
+                    heading: "Development",
+                    sub_headings: [
+                        "Emailers",
+                        "News Letter",
+                        "Landing Page"
+                    ]
+                }
+            ]
+        },
+        {
+            heading: "Banner Ads",
+            sub_headings: [
+                {
+                    heading: "",
+                    sub_headings: [
+                        "Web Banners",
+                        "Html5 banners",
+                        "Google Adwords Banners",
+                        "Animated Banners",
+                        "Dynamic Banners"
+                    ]
+                }
+            ]
+        },
+        {
+            heading: "Content Marketing",
+            sub_headings: [
+                {
+                    heading: "Marketing",
+                    sub_headings: [
+                        "Influencer Marketing",
+                        "Performance Marketing",
+                        "Social Media Marketing",
+                        "Media Campaigns"
+                    ]
+                },
+                {
+                    heading: "Strategy",
+                    sub_headings: [
+                        "Design Strategy",
+                        "Marketing Strategy",
+                        "Branding Strategy"
+                    ]
+                },
+                {
+                    heading: "Content Creation",
+                    sub_headings: [
+                        "Creative Content",
+                        "Strategic Content",
+                        "Content Writing"
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Social Media",
+            "sub_headings": [
+                {
+                    "heading": "",
+                    "sub_headings": [
+                        "Strategizing",
+                        "Designing",
+                        "Executing",
+                        "Analysing",
+                        "Copy Writing",
+                        "Collaborations",
+                        "Campaign Plans"
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Motion and Video",
+            "sub_headings": [
+                {
+                    "heading": "",
+                    "sub_headings": [
+                        "2D Animation",
+                        "3D Animation",
+                        "CGI Animation",
+                        "Video Editing",
+                        "Explainer Videos"
+                    ]
+                }
+            ]
+        },
+        {
+            "heading": "Post Production",
+            "sub_headings": [
+                {
+                    "heading": "",
+                    "sub_headings": [
+                        "Ad Banners",
+                        "Movie Posters",
+                        "Video Editing"
+                    ]
+                }
+            ]
+        }
+
+    ]
+
 
     const AngledLine = ({
         startY = 5,    // Bottom point
@@ -35,7 +251,7 @@ const WhatWeDo = () => {
                     strokeLinecap="round"
                     opacity={opacity}
                 />
-    
+
                 {/* Secondary line for depth */}
                 <line
                     x1="0"
@@ -114,7 +330,7 @@ const WhatWeDo = () => {
 
             <div className="w-[100%] h-fit border-0 border-red-500 mt-[10%] relative z-10 ">
                 {
-                    data.map((data , index) => (
+                    data.map((data, index) => (
                         <DropDown data={data} key={index}></DropDown>
                     ))
                 }
