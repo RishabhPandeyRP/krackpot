@@ -14,11 +14,11 @@ const ProjectsCard = ({ item }: {
         <div className="w-[100%] px-[5%] py-5">
             <div className="w-[100%] flex flex-col gap-3">
                 <div className="w-[100%] flex justify-between items-center">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] sm:text-[40px] text-[#DE9400] w-[85%] mx-auto leading-28">
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] sm:text-[40px] text-[40px] text-[#DE9400] w-[85%] mx-auto leading-28">
                         {item.heading}
                     </div>
 
-                    <div className="w-[250px] h-[55px] relative">
+                    <div className="sm:w-[250px] sm:h-[55px] w-[150px] h-[50px] relative">
                         <Image
                             src={item.logo}
                             alt="logo image"
@@ -29,39 +29,39 @@ const ProjectsCard = ({ item }: {
 
                 </div>
 
-                <div className="font-auster font-[600] lg:text-[21px] md:text-[18px] sm:text-[15px] text-[#01193D] w-full">
+                <div className="font-auster font-[600] lg:text-[21px] md:text-[18px] sm:text-[15px] text-[15px] text-[#01193D] w-full">
                     {item.content}
                 </div>
             </div>
 
             <div className="w-[100%] flex justify-between">
                 <div className="flex flex-col w-[45%] gap-3">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] sm:text-[40px] text-[#DE9400] w-[100%] mx-auto leading-28">
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] text-[40px] text-[#DE9400] w-[100%] mx-auto leading-28">
                         Objective
                     </div>
 
-                    <div className="font-auster font-[600] lg:text-[21px] md:text-[18px] sm:text-[15px] text-[#01193D] w-full">
+                    <div className="font-auster font-[600] lg:text-[21px] md:text-[18px] text-[15px] text-[#01193D] w-full">
                         {item.objective}
                     </div>
                 </div>
 
                 <div className="flex flex-col w-[45%] gap-3">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] sm:text-[40px] text-[#DE9400] w-[100%] mx-auto leading-28">
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] text-[40px] text-[#DE9400] w-[100%] mx-auto leading-28">
                         Challenges
                     </div>
 
-                    <div className="font-auster font-[600] lg:text-[21px] md:text-[18px] sm:text-[15px] text-[#01193D] w-full">
+                    <div className="font-auster font-[600] lg:text-[21px] md:text-[18px] text-[15px] text-[#01193D] w-full">
                         {item.challenges}
                     </div>
                 </div>
             </div>
 
             <div className="flex flex-col w-[100%] gap-3">
-                <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] sm:text-[40px] text-[#DE9400] w-[100%] mx-auto leading-28">
+                <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] text-[40px] text-[#DE9400] w-[100%] mx-auto leading-28">
                     Solution/Execution
                 </div>
 
-                <div className="font-auster font-[600] lg:text-[21px] md:text-[18px] sm:text-[15px] text-[#01193D] w-full">
+                <div className="font-auster font-[600] lg:text-[21px] md:text-[18px] text-[15px] text-[#01193D] w-full">
                     {item.solution}
                 </div>
             </div>

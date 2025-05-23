@@ -75,7 +75,7 @@ const WhatWeDid = () => {
     const router = useRouter()
 
     return (
-        <div className="w-[100%] min-h-[1750px] h-auto border-0 border-red-500 bg-white relative flex flex-col sm:gap-[100px] lg:gap-0 sm:py-7 lg:py-0">
+        <div className="w-[100%] min-h-[1750px] h-auto border-0 border-red-500 bg-white relative flex flex-col gap-[100px] lg:gap-0 py-7 lg:py-0">
 
             {/* <AngledLine></AngledLine> */}
 
@@ -122,14 +122,14 @@ const WhatWeDid = () => {
                 ))}
             </div>
 
-            <div className="w-[100%] lg:h-[500px] sm:h-[650px] flex border-0 border-red-500 lg:flex-row sm:flex-col sm:gap-[10%] z-10 relative">
-                <div className="lg:w-[45%] sm:w-[80%] sm:mx-auto h-[100%] border-0 border-red-500 px-[7%]">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[#DE9400] w-fit leading-28">What We Did</div>
+            <div className="w-[100%] lg:h-[500px] h-[650px] flex border-0 border-red-500 lg:flex-row flex-col gap-[10%] z-10 relative">
+                <div className="lg:w-[45%] w-[90%] mx-auto h-[100%] border-0 border-red-500 px-[7%]">
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] w-fit leading-28">What We Did</div>
 
-                    <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[#01193D] w-fit ">We are passionate about delivering exceptional work that exceeds our clients' expectations.</div>
+                    <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[15px] text-[#01193D] w-fit ">We are passionate about delivering exceptional work that exceeds our clients' expectations.</div>
 
-                    <div className="sm:w-[50%] lg:w-[60%] lg:h-[10%] sm:h-[15%] border border-[#01193D]  relative mt-[6%] bg-[#01193D]">
-                        <button className="w-[100%] h-[100%] border border-[#01193D] bg-white text-[#01193D] absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[700] text-[20px] cursor-pointer" onClick={()=>router.push("/all-projects")}>
+                    <div className="w-[50%] lg:w-[60%] lg:h-[10%] h-[15%] border border-[#01193D]  relative mt-[6%] bg-[#01193D]">
+                        <button className="w-[100%] h-[100%] border border-[#01193D] bg-white text-[#01193D]  absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[700] lg:text-[25px] sm:text-[20px] text-[15px] cursor-pointer" onClick={()=>router.push("/all-projects")}>
 
                             <div>
                                 view all projects
@@ -157,7 +157,7 @@ const WhatWeDid = () => {
 
             </div>
 
-            <div className="w-full h-[1100px] relative border-0 border-red-500">
+            <div className="w-full sm:h-[1100px] h-[900px] relative border-0 border-red-500">
                 <div className="w-full h-[90%] overflow-hidden px-[2%] relative mt-[4%]">
                     <div
                         className="flex transition-transform duration-700 ease-in-out"
@@ -173,7 +173,7 @@ const WhatWeDid = () => {
                     </div>
                 </div>
 
-                <div className="absolute bottom-10 right-14 w-[13%] h-[55px] bg-[#01193D] flex justify-between items-center px-[1%] ">
+                <div className="absolute bottom-10 right-14 sm:w-[13%] w-[20%] h-[55px] bg-[#01193D] flex justify-between items-center px-[1%] ">
                     <button
                         onClick={() => scroll("left")}
                         className="relative w-[50%] h-[50%] cursor-pointer"

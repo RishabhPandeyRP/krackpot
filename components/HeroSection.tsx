@@ -45,9 +45,7 @@ const AngledLine = ({
 const HeroSection = () => {
     const router = useRouter()
     return (
-        <div className="w-full lg:h-[700px] sm:h-auto relative overflow-hidden px-[5%]  border-0 border-green-500 flex  lg:flex-row sm:flex-col justify-between items-center sm:gap-5 bg-[#efeff8]">
-
-            {/* <AngledLine></AngledLine> */}
+        <div className="w-full lg:h-[700px] h-[800px] relative overflow-hidden px-[5%]  border-0 border-green-500 flex  lg:flex-row flex-col justify-between items-center gap-5 bg-[#efeff8] mt-[110px]">
 
             <div className="absolute inset-0">
                 {/* Horizontal lines */}
@@ -86,8 +84,8 @@ const HeroSection = () => {
 
 
             {/* 🔷 Main Content */}
-            <div className="lg:w-[55%] sm:w-[75%] h-[65%]  z-10 border-0 border-red-500 flex flex-col lg:gap-[9%] sm:gap-10 sm:pt-[10%] lg:pt-[2%]">
-                <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[#DE9400] w-full leading-tight">
+            <div className="lg:w-[55%] sm:w-[75%] h-[65%]  z-10 border-0 border-red-500 flex flex-col lg:gap-[9%] sm:gap-10 gap-10 pt-[10%] lg:pt-[2%]">
+                <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] w-full leading-tight">
                     CREaTIVE MiNDS <br />
                     THaT BRiNGS <br />
                     BRaNDS To <br />
@@ -96,9 +94,9 @@ const HeroSection = () => {
 
                 {/* Button */}
                 <div>
-                    <div className="lg:w-[250px] md:w-[200px] sm:w-[150px] lg:h-[50px] sm:h-[45px] border-0 border-[#01193D] relative bg-[#01193D]">
+                    <div className="lg:w-[250px] md:w-[200px] sm:w-[150px] w-[200px] lg:h-[50px] sm:h-[45px] h-[40px] border-0 border-[#01193D] relative bg-[#01193D]">
                         <button className="w-full h-full border border-[#01193D] bg-white absolute bottom-2 left-1 flex justify-center items-center gap-[8%] text-[#01193D] px-1 cursor-pointer" onClick={()=>router.push("/all-works")}>
-                            <div className="font-[700] lg:text-[22px] sm:text-[20px]">view our work</div>
+                            <div className="font-[700] lg:text-[22px] sm:text-[20px] text-base">view our work</div>
                             <div className="relative w-[20%] h-full">
                                 <Image
                                     src="/enter_button 1.svg"
@@ -113,7 +111,7 @@ const HeroSection = () => {
             </div>
 
             {/* Right-side Asset */}
-            <div className="lg:w-[45%] lg:h-[70%] sm:w-[70%] sm:h-[500px]  z-10 border-0 border-red-500">
+            <div className="lg:w-[45%] lg:h-[70%] w-[70%] h-[70%] scale-[135%] sm:scale-[110%] z-10 border-0 border-red-500">
                 <div className="relative w-full h-full">
                     <Image
                         src="/heroAsset.svg"

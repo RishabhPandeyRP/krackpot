@@ -78,7 +78,7 @@ const ClientsSay = () => {
     )
 
     return (
-        <div className="w-[100%] min-h-[1400px] h-auto border-0 border-red-500 bg-white relative">
+        <div className="w-[100%] min-h-[1200px] h-auto border-0 border-red-500 bg-white relative">
             {/* <AngledLine></AngledLine> */}
 
             <div className="absolute inset-0 ">
@@ -125,11 +125,11 @@ const ClientsSay = () => {
                 ))}
             </div>
 
-            <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[#DE9400] w-fit leading-28 px-[5%] py-[5%] z-10 relative ">
+            <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] w-fit leading-28 px-[5%] py-[5%] z-10 relative ">
                 What our clients Say
             </div>
 
-            <div className="w-full h-[1000px] border-0 border-red-500 z-10 relative ">
+            <div className="w-full sm:h-[1000px] h-[900px] border-0 border-red-500 z-10 relative ">
                 <div className="w-full min-h-[80%] h-auto px-[2%] relative mt-[0%] border-0 border-green-500 overflow-hidden">
                     <div
                         className="flex items-center transition-transform duration-700 ease-in-out"
@@ -146,7 +146,7 @@ const ClientsSay = () => {
                 </div>
 
                 {/* Navigation */}
-                <div className="absolute bottom-10 right-14 w-[13%] h-[55px] bg-[#01193D] flex justify-between items-center px-[1%]">
+                <div className="absolute bottom-10 right-14 sm:w-[13%] w-[20%] h-[55px] bg-[#01193D] flex justify-between items-center px-[1%]">
                     <button
                         onClick={() => scroll("left")}
                         className="relative w-[50%] h-[50%]"

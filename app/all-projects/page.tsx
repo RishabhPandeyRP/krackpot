@@ -72,7 +72,7 @@ const Projects = () => {
             </div>
 
             {/* Button Navigation */}
-            <div className="w-[13%] h-[55px] bg-[#01193D] flex justify-between items-center px-[1%] mb-20 mr-24 z-10">
+            <div className="sm:w-[13%] w-[20%] h-[55px] bg-[#01193D] flex justify-between items-center px-[1%] mb-20 sm:mr-24 mr-20 z-10">
                 <button
                     onClick={() => scroll("left")}
                     className="relative w-[50%] h-[50%] cursor-pointer"

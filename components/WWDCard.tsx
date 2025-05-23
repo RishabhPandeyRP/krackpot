@@ -7,7 +7,7 @@ const WWDCard = ({ data }: {
     }
 }) => {
     return (
-        <div className="w-[750px] h-[850px] border-0 border-[#01193D]">
+        <div className="sm:w-[750px] sm:h-[850px] w-[600px] h-[700px] border-0 border-[#01193D]">
             <div className="w-[100%] h-[80%] relative p-2 border-0 border-[#01193D]">
                 <Image
                     src={data.image}
@@ -19,12 +19,12 @@ const WWDCard = ({ data }: {
 
             <div className="w-[100%] h-[100%] pl-[6%]">
                 <div className="w-[50%] h-[5%] border border-[#01193D]  relative mt-[6%] bg-[#01193D] pl-[3%]">
-                    <button className="w-[100%] h-[100%] border border-[#DE9400] bg-[#DE9400] text-[#01193D] absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[600] text-[16px]">
+                    <button className="w-[100%] h-[100%] border border-[#DE9400] bg-[#DE9400] text-[#01193D] absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[600] sm:text-[16px] text-[14px] text-nowrap">
 
                         <div>
                             {data.heading}
                         </div>
-                        <div className="relative w-[20%] h-full">
+                        <div className="relative sm:w-[20%] w-[15%] h-full">
                             <Image
                                 src="/letsTalk.svg"
                                 alt="lets talk picture"

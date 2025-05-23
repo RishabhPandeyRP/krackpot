@@ -151,7 +151,7 @@ const Footer = () => {
             </div>
 
 
-            <div className="font-auster font-[600] lg:text-[15px] sm:text-[8px] text-[#01193D] text-center relative z-10">
+            <div className="font-auster font-[600] lg:text-[15px] text-[9px] text-[#01193D] text-center relative z-10">
                 © M/s Krackpot Designs and Digital solutions 2025. All rights reserved
             </div>
         </div>

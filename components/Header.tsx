@@ -48,9 +48,9 @@ const Header = () => {
         <>
             <div className="w-[100%] h-[110px] bg-[#e5e5f4] fixed top-0 left-0 z-50 overflow-hidden">
                 <div className="w-[90%] h-[110px] border-0 border-amber-900 mx-auto flex justify-between ">
-                    <div className="w-[20%] h-[100%] border-0 border-red-500">
+                    <div className="lg:w-[20%] md:w-[30%] w-[40%] h-[100%] border-0 border-red-500">
                         <div className="w-[100%] h-[100%] border border-[#01193D] rounded-bl-lg rounded-br-lg relative">
-                            <div className="w-[100%] h-[100%] bg-[#01193D] border border-[#01193D] rounded-bl-lg rounded-br-lg absolute bottom-1 left-1 py-3">
+                            <div className="w-[100%] h-[100%] bg-[#01193D] border border-[#01193D] rounded-bl-lg rounded-br-lg absolute bottom-1 left-1 py-5">
                                 <div className="relative w-full h-full">
                                     <Link href={"/"}>
                                         <Image
@@ -65,8 +65,8 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <div className="lg:w-[20%] sm:w-[40%] h-[100%] flex justify-between items-center border-0 border-blue-800">
-                        <div className="w-[50%] h-[40%] border border-[#01193D] rounded-lg relative">
+                    <div className="lg:w-[20%] w-[40%] h-[100%] flex md:justify-between justify-end items-center border-0 border-blue-800">
+                        <div className="w-[50%] h-[40%] border border-[#01193D] rounded-lg relative hidden md:block">
                             <button className="w-[100%] h-[100%] border border-[#01193D] rounded-lg bg-[#01193D] absolute top-1 left-1 flex justify-center items-center gap-[8%]">
 
                                 <div>
@@ -102,17 +102,17 @@ const Header = () => {
 
                 <div className="absolute top-[110px] w-[100%] h-auto border-0 border-red-500 z-50 flex bg-[#DFDFF1] px-[5%] pb-3">
 
-                    <div className="w-[55%] h-auto relative border-0 border-red-500 flex justify-center items-center">
+                    
                         <Image
                             src={"/blue_logo 1.svg"}
                             alt="blue icon"
                             width={500}
                             height={500}
-                            className="object-contain"
+                            className=""
                         ></Image>
-                    </div>
+                    
                     <div className="flex flex-col w-[40%] justify-end items-end">
-                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[50px] sm:text-[45px] text-[#DE9400] w-fit leading-28">Menu</div>
+                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[50px] sm:text-[45px] text-[40px] text-[#DE9400] w-fit leading-28">Menu</div>
                         {
                             dataArr.map((item, index) => (
                                 item.link != "#" && <Link href={item.link} onClick={() => setIsOpen(false)} key={index}>
@@ -123,7 +123,7 @@ const Header = () => {
                             ))
                         }
 
-                        <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Follow us</div>
+                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[50px] sm:text-[45px] text-[40px] text-[#DE9400] w-fit leading-28">Follow us</div>
 
                         <div className="w-full flex justify-end items-end gap-4">
                             {

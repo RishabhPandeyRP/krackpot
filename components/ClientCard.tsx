@@ -9,8 +9,8 @@ const ClientCard = ({ data, index }: {
     index: number
 }) => {
     return (
-        <div className={`w-[600px] h-[750px] bg-[#01193D] relative ${index % 2 != 0 ? "mt-[10%]" : ""}`}>
-            <div className="w-[600px] h-[750px] border border-[#01193D] bg-[#E9E9ED] absolute bottom-2 left-2 flex items-center">
+        <div className={`sm:w-[600px] sm:h-[750px] w-[500px] h-[650px] bg-[#01193D] relative ${index % 2 != 0 ? "mt-[10%]" : ""}`}>
+            <div className="sm:w-[600px] sm:h-[750px] w-[500px] h-[650px] border border-[#01193D] bg-[#E9E9ED] absolute bottom-2 left-2 flex items-center">
                 <Image
                     src={"/downQuotes2.svg"}
                     alt=""
