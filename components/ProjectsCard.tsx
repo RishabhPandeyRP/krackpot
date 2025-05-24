@@ -14,7 +14,7 @@ const ProjectsCard = ({ item }: {
         <div className="w-[100%] px-[5%] py-5">
             <div className="w-[100%] flex flex-col gap-3">
                 <div className="w-[100%] flex justify-between items-center">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] sm:text-[40px] text-[40px] text-[#DE9400] w-[85%] mx-auto leading-28">
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] sm:text-[40px] text-[40px] text-[#DE9400] w-[85%] mx-auto leading-normal">
                         {item.heading}
                     </div>
 
@@ -34,8 +34,8 @@ const ProjectsCard = ({ item }: {
                 </div>
             </div>
 
-            <div className="w-[100%] flex justify-between">
-                <div className="flex flex-col w-[45%] gap-3">
+            <div className="w-[100%] sm:flex justify-between flex-col">
+                <div className="flex flex-col w-[95%] sm:w-[45%] gap-3">
                     <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] text-[40px] text-[#DE9400] w-[100%] mx-auto leading-28">
                         Objective
                     </div>
@@ -45,7 +45,7 @@ const ProjectsCard = ({ item }: {
                     </div>
                 </div>
 
-                <div className="flex flex-col w-[45%] gap-3">
+                <div className="flex flex-col w-[95%] sm:w-[45%] gap-3">
                     <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] text-[40px] text-[#DE9400] w-[100%] mx-auto leading-28">
                         Challenges
                     </div>

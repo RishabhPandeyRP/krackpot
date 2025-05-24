@@ -132,7 +132,7 @@ const Clients = () => {
             </div>
 
             <div className="w-full lg:h-[550px] h-auto border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 ">
-                <div className="flex flex-col w-full h-fit px-[5%] my-[1%]">
+                <div className="flex flex-col w-full h-fit px-[7%] my-[1%]">
                     <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] w-fit leading-28">
                         Our Clients
                     </div>
@@ -145,8 +145,8 @@ const Clients = () => {
                     <Slider {...settings}>
                         {logosList.map((src, index) => (
                             <div key={index} className="px-2">
-                                <div className="w-[250px] h-[200px] bg-white border border-gray-300 flex items-center justify-center mx-auto !shadow-lg shadow-black/15">
-                                    <div className="relative w-[120px] h-[70px]">
+                                <div className="w-[250px] h-[200px] md:w-[460px] bg-white border border-gray-300 flex items-center justify-center mx-auto !shadow-lg shadow-black/15">
+                                    <div className="relative w-[120px] md:w-[90px] h-[70px]">
                                         <Image
                                             src={src}
                                             alt={`client-logo-${index}`}
@@ -162,11 +162,11 @@ const Clients = () => {
             </div>
 
             <div className="w-full lg:h-[550px] h-auto border-0 border-red-500 overflow-hidden flex flex-col gap-[5%] relative z-10 ">
-                <div className="flex flex-col w-full h-fit px-[5%] my-[1%] items-end">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[45px] text-[35px] text-[#DE9400] w-fit leading-28">
+                <div className="flex flex-col w-full h-fit px-[7%] my-[1%] items-end">
+                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[45px] text-[35px] text-[#DE9400] w-fit leading-tight">
                         Agencies Joined Hands with us
                     </div>
-                    <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[15px] text-[#01193D] w-fit leading-28 -mt-[50px]">
+                    <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[15px] text-[#01193D] w-fit lg:leading-28 leading-tight lg:-mt-[50px] mb-5">
                         The combined expertise and resources can lead to better results.
                     </div>
                 </div>
@@ -175,8 +175,8 @@ const Clients = () => {
                     <Slider {...settings}>
                         {logosList.map((src, index) => (
                             <div key={index} className="px-2">
-                                <div className="w-[250px] h-[200px] bg-white border border-gray-300 flex items-center justify-center mx-auto !shadow-lg shadow-black/15">
-                                    <div className="relative w-[120px] h-[70px]">
+                                <div className="w-[250px] h-[200px] md:w-[460px] bg-white border border-gray-300 flex items-center justify-center mx-auto !shadow-lg shadow-black/15">
+                                    <div className="relative w-[120px] md:w-[90px] h-[70px]">
                                         <Image
                                             src={src}
                                             alt={`client-logo-${index}`}

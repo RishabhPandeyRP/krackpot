@@ -9,8 +9,8 @@ const ClientCard = ({ data, index }: {
     index: number
 }) => {
     return (
-        <div className={`sm:w-[600px] sm:h-[750px] w-[500px] h-[650px] bg-[#01193D] relative ${index % 2 != 0 ? "mt-[10%]" : ""}`}>
-            <div className="sm:w-[600px] sm:h-[750px] w-[500px] h-[650px] border border-[#01193D] bg-[#E9E9ED] absolute bottom-2 left-2 flex items-center">
+        <div className={`sm:w-[600px] sm:h-[750px] w-[320px] h-[650px] bg-[#01193D] relative ${index % 2 != 0 ? "mt-[10%]" : ""}`}>
+            <div className="sm:w-[600px] sm:h-[750px] w-[320px] h-[650px] border border-[#01193D] bg-[#E9E9ED] absolute bottom-2 left-2 flex items-center">
                 <Image
                     src={"/downQuotes2.svg"}
                     alt=""
@@ -48,9 +48,9 @@ const ClientCard = ({ data, index }: {
                     {data.content}
                 </div>
 
-                <div className="w-[50%] h-auto absolute bottom-5 right-10 flex flex-col items-end">
-                    <div className="font-auster font-[600] lg:text-[30px] sm:text-[25px] text-[#01193D]">{data.name}</div>
-                    <div className="font-auster font-[400] lg:text-[20px] sm:text-[15px] text-[#01193D]">{data.post}</div>
+                <div className="w-[50%] h-auto absolute bottom-5 sm:right-10 right-5 flex flex-col items-end border-0 border-red-500 gap-0">
+                    <div className="font-auster font-[600] lg:text-[30px] sm:text-[25px] text-[15px] text-[#01193D]">{data.name}</div>
+                    <div className="font-auster font-[400] lg:text-[20px] sm:text-[15px] text-[15px] text-[#01193D] border-0 border-red-500 text-end">{data.post}</div>
 
                     <Image
                         src={data.logoLink}

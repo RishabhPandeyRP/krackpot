@@ -207,8 +207,8 @@ const ContactUs = () => {
                 className="object-contain hidden lg:block"
                 priority
             />
-            <div className="lg:absolute lg:w-[45%] mx-auto w-[70%] h-[1100px] border-0 border-red-500 flex flex-col items-center z-10 lg:top-[20%] lg:left-[27%] left-0 px-[5%] gap-[2%]">
-                <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] text-center leading-tight w-[50%]">
+            <div className="lg:absolute lg:w-[45%] mx-auto w-[80%] h-[1100px] border-0 border-red-500 flex flex-col items-center z-10 lg:top-[20%] lg:left-[27%] left-0 px-[5%] gap-[2%]">
+                <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] text-center leading-tight w-[60%]">
                     Let's Get Started
                 </div>
 
@@ -227,7 +227,7 @@ const ContactUs = () => {
                                 id={field.id}
                                 type={field.type}
                                 placeholder={field.placeholder}
-                                className="font-[400] sm:text-[25px] text-[20px] text-[#696A6B] border-b-1 border-[#696A6B]"
+                                className="font-[400] sm:text-[25px] text-[15px] text-[#696A6B] border-b-1 border-[#696A6B]"
                                 value={formData[field.id as keyof typeof formData]}
                                 onChange={handleChange}
                             />
@@ -244,7 +244,7 @@ const ContactUs = () => {
                         <textarea
                             id="msg"
                             placeholder="Enter Your Message"
-                            className="font-[400] sm:text-[25px] text-[20px] text-[#696A6B] border-b border-[#696A6B] bg-transparent outline-none w-full resize-none"
+                            className="font-[400] sm:text-[25px] text-[15px] text-[#696A6B] border-b border-[#696A6B] bg-transparent outline-none w-full resize-none"
                             value={formData.msg}
                             onChange={handleChange}
                         />
@@ -272,7 +272,7 @@ const ContactUs = () => {
                     </div>
 
                     <div className="w-[50%] h-[50px] border border-[#01193D] mx-auto relative mt-[6%] bg-[#01193D]">
-                        <button type="submit" className="w-[100%] h-[100%] border border-[#01193D] bg-white text-[#01193D] absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[700] lg:text-[20px] md:text-[15px] sm:text-[13px] text-[13px] cursor-pointer">
+                        <button type="submit" className="w-[100%] h-[100%] border border-[#01193D] bg-white text-[#01193D] absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[700] lg:text-[20px] md:text-[15px] sm:text-[13px] text-[11px] px-1 text-nowrap cursor-pointer">
                             <div>{buttonText}</div>
                             <div className="relative sm:w-[20%] w-[15%] h-full">
                                 <Image

@@ -100,19 +100,22 @@ const Header = () => {
             {isOpen && <>
                 <div className="fixed inset-0 bg-black/50 z-40" onClick={() => setIsOpen(false)}></div>
 
-                <div className="absolute top-[110px] w-[100%] h-auto border-0 border-red-500 z-50 flex bg-[#DFDFF1] px-[5%] pb-3">
+                <div className="fixed top-[110px] w-[100%] h-auto border-0 border-red-500 z-50 flex justify-between bg-[#DFDFF1] px-[5%] pb-3">
 
 
-                    <Image
-                        src={"/blue_logo 1.svg"}
-                        alt="blue icon"
-                        width={500}
-                        height={500}
-                        className=""
-                    ></Image>
+
+                    <div className="w-[50%] sm:w-[40%] md:w-[30%] lg:w-[25%] relative aspect-[1/1]">
+                        <Image
+                            src="/blue_logo 1.svg"
+                            alt="blue icon"
+                            fill
+                            className="object-contain"
+                        />
+                    </div>
+
 
                     <div className="flex flex-col w-[40%] justify-end items-end">
-                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[50px] sm:text-[45px] text-[40px] text-[#DE9400] w-fit leading-28">Menu</div>
+                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[50px] sm:text-[45px] text-[40px] text-[#DE9400] w-fit leading-tight">Menu</div>
                         {
                             dataArr.map((item, index) => (
                                 item.link != "#" && <Link href={item.link} onClick={() => setIsOpen(false)} key={index}>
@@ -123,7 +126,7 @@ const Header = () => {
                             ))
                         }
 
-                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[50px] sm:text-[45px] text-[40px] text-[#DE9400] w-fit leading-28">Follow us</div>
+                        <div className="font-auster text-shadow text-stroke font-[600] lg:text-[50px] sm:text-[45px] text-[40px] text-[#DE9400] w-fit leading-tight text-nowrap">Follow us</div>
 
                         <div className="w-full flex justify-end items-end gap-4">
                             {
