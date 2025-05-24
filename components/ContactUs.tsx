@@ -4,6 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 
 const ContactUs = () => {
+    const [buttonText, setButtonText] = useState("SUBMIT ENQUIRY");
+
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -22,19 +25,21 @@ const ContactUs = () => {
         category: false,
     });
 
-    const handleChange = (e: any) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { id, value } = e.target;
         setFormData({ ...formData, [id]: value });
         setErrors({ ...errors, [id]: false });
     };
 
-    const handleCategoryChange = (e: any) => {
+    const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setFormData({ ...formData, category: e.target.value });
         setErrors({ ...errors, category: false });
     };
 
-    const handleSubmit = (e: any) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        const url = "https://script.google.com/macros/s/AKfycbzOR1yXMv60GXibIL8xV8vVzhQdpmrz6KXe6N87aWzQccoMvT6X10d-fT77gsrLVgqa/exec"
 
         // Validate fields
         const newErrors = {
@@ -53,7 +58,31 @@ const ContactUs = () => {
 
         const jsonData = JSON.stringify(formData, null, 2);
         console.log("Form Data:", jsonData);
-        // You can now send jsonData to your backend/API
+
+        setButtonText("Submitting...");
+
+        fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: (`Name=${formData.name}&Email=${formData.email}&Country=${formData.country}&Mob_No=${formData.no}&Message=${formData.msg}&Category=${formData.category}`)
+        }).then(res => res.text())
+            .then(data => {
+                setButtonText("Submitted");
+                setFormData({
+                    name: "",
+                    email: "",
+                    country: "",
+                    no: "",
+                    msg: "",
+                    category: "",
+                });
+                setTimeout(() => setButtonText("SUBMIT ENQUIRY"), 2000);
+            })
+            .catch((error) => {
+                console.error(error);
+                setButtonText("SUBMIT ENQUIRY");
+            });
+
     };
 
     const AngledLine = ({
@@ -243,8 +272,8 @@ const ContactUs = () => {
                     </div>
 
                     <div className="w-[50%] h-[50px] border border-[#01193D] mx-auto relative mt-[6%] bg-[#01193D]">
-                        <button type="submit" className="w-[100%] h-[100%] border border-[#01193D] bg-white text-[#01193D] absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[700] lg:text-[20px] md:text-[15px] sm:text-[13px] text-[13px]">
-                            <div>SUBMIT ENQUIRY</div>
+                        <button type="submit" className="w-[100%] h-[100%] border border-[#01193D] bg-white text-[#01193D] absolute bottom-1 left-1 flex justify-center items-center gap-[8%] font-[700] lg:text-[20px] md:text-[15px] sm:text-[13px] text-[13px] cursor-pointer">
+                            <div>{buttonText}</div>
                             <div className="relative sm:w-[20%] w-[15%] h-full">
                                 <Image
                                     src="/enter_button 1.svg"
@@ -255,6 +284,8 @@ const ContactUs = () => {
                             </div>
                         </button>
                     </div>
+
+
                 </form>
             </div>
 

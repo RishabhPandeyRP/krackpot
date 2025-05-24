@@ -68,10 +68,10 @@ const Header = () => {
                     <div className="lg:w-[20%] w-[40%] h-[100%] flex md:justify-between justify-end items-center border-0 border-blue-800">
                         <div className="w-[50%] h-[40%] border border-[#01193D] rounded-lg relative hidden md:block">
                             <button className="w-[100%] h-[100%] border border-[#01193D] rounded-lg bg-[#01193D] absolute top-1 left-1 flex justify-center items-center gap-[8%]">
-
-                                <div>
+                                <Link href={"#contact"}><div>
                                     Let’s Talk
-                                </div>
+                                </div></Link>
+
                                 <div className="relative w-[20%] h-full">
                                     <Image
                                         src="/letsTalk.svg"
@@ -102,15 +102,15 @@ const Header = () => {
 
                 <div className="absolute top-[110px] w-[100%] h-auto border-0 border-red-500 z-50 flex bg-[#DFDFF1] px-[5%] pb-3">
 
-                    
-                        <Image
-                            src={"/blue_logo 1.svg"}
-                            alt="blue icon"
-                            width={500}
-                            height={500}
-                            className=""
-                        ></Image>
-                    
+
+                    <Image
+                        src={"/blue_logo 1.svg"}
+                        alt="blue icon"
+                        width={500}
+                        height={500}
+                        className=""
+                    ></Image>
+
                     <div className="flex flex-col w-[40%] justify-end items-end">
                         <div className="font-auster text-shadow text-stroke font-[600] lg:text-[50px] sm:text-[45px] text-[40px] text-[#DE9400] w-fit leading-28">Menu</div>
                         {
