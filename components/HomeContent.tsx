@@ -22,7 +22,7 @@ export default function HomeContent() {
             if (element) {
                 setTimeout(() => {
                     const isMobile = window.innerWidth <= 650;
-                    const yOffset = isMobile ? 250 : -110;
+                    const yOffset = isMobile ? 200 : -110;
                     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: y, behavior: "smooth" });
                 }, 300);

@@ -77,7 +77,7 @@ const Header = () => {
                     const el = document.getElementById(hash);
                     if (el) {
                         const isMobile = window.innerWidth <= 650;
-                        const yOffset = isMobile ? 250 : -110;
+                        const yOffset = isMobile ? 200 : -110;
                         const offset = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
                         window.scrollTo({ top: offset, behavior: "smooth" });
                     }
@@ -98,7 +98,7 @@ const Header = () => {
             const el = document.getElementById("contact");
             if (el) {
                 const isMobile = window.innerWidth <= 650;
-                const yOffset = isMobile ? 250 : -110;
+                const yOffset = isMobile ? 200 : -110;
                 const offset = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 window.scrollTo({ top: offset, behavior: "smooth" });
             }
@@ -109,7 +109,7 @@ const Header = () => {
                 const el = document.getElementById("contact");
                 if (el) {
                     const isMobile = window.innerWidth <= 650;
-                    const yOffset = isMobile ? 250 : -110;
+                    const yOffset = isMobile ? 200 : -110;
                     const offset = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
                     window.scrollTo({ top: offset, behavior: "smooth" });
                 }
