@@ -142,7 +142,7 @@ const Header = () => {
                     <div className="lg:w-[20%] w-[40%] h-[100%] flex md:justify-between justify-end items-center border-0 border-blue-800">
                         <div className="w-[50%] h-[40%] border border-[#01193D] rounded-lg relative hidden md:block cursor-pointer">
                             <Link href={"#contact"} onClick={handleLetsTalkClick}>
-                                <button className="w-[100%] h-[100%] border border-[#01193D] rounded-lg bg-[#01193D] absolute top-1 left-1 flex justify-center items-center gap-[8%] cursor-pointer">
+                                <button className="w-[100%] h-[100%] border border-[#01193D] rounded-lg bg-[#01193D] absolute top-1 left-1 flex justify-center items-center gap-[8%] cursor-pointer text-white">
                                     <div>
                                         Let’s Talk
                                     </div>

@@ -108,7 +108,7 @@ const HeroSection = () => {
 
 
             {/* 🔷 Main Content */}
-            <div className="lg:w-[55%] sm:w-[75%] h-[65%]  z-10 border-0 border-red-500 flex flex-col lg:gap-[9%] sm:gap-10 gap-10 pt-[10%] lg:pt-[2%]">
+            <div className="lg:w-[55%] sm:w-[75%] h-[65%]  z-10 border-0 border-red-500 flex flex-col lg:gap-[9%] sm:gap-10 gap-10 pt-[10%] lg:pt-[0%]">
                 <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] w-full leading-tight">
                     CREaTIVE MiNDS <br />
                     THaT BRiNGS <br />
