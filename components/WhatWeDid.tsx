@@ -193,7 +193,7 @@ const WhatWeDid = () => {
             </div>
 
             <div className="w-full sm:h-[1100px] h-[800px] relative border-0 border-red-500">
-                <div className="w-full h-[90%] overflow-hidden px-[2%] relative mt-[4%]">
+                <div className="w-full h-[90%] overflow-hidden px-[7%] relative mt-[4%]">
                     <div
                         className="flex transition-transform duration-700 ease-in-out"
                         style={{
