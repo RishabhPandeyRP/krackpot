@@ -34,9 +34,9 @@ const ProjectsCard = ({ item }: {
                 </div>
             </div>
 
-            <div className="w-[100%] sm:flex justify-between flex-col">
+            <div className="w-[100%] flex sm:flex-row justify-between flex-col">
                 <div className="flex flex-col w-[95%] sm:w-[45%] gap-3">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] text-[40px] text-[#DE9400] w-[100%] mx-auto leading-28">
+                    <div className="font-auster text-shadow-2 font-[600] lg:text-[60px] md:text-[50px] text-[40px] text-[#01193D] w-[100%] mx-auto leading-28">
                         Objective
                     </div>
 
@@ -46,7 +46,7 @@ const ProjectsCard = ({ item }: {
                 </div>
 
                 <div className="flex flex-col w-[95%] sm:w-[45%] gap-3">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] text-[40px] text-[#DE9400] w-[100%] mx-auto leading-28">
+                    <div className="font-auster text-shadow-2 font-[600] lg:text-[60px] md:text-[50px] text-[40px] text-[#01193D] w-[100%] mx-auto leading-28">
                         Challenges
                     </div>
 
@@ -57,7 +57,7 @@ const ProjectsCard = ({ item }: {
             </div>
 
             <div className="flex flex-col w-[100%] gap-3">
-                <div className="font-auster text-shadow text-stroke font-[600] lg:text-[60px] md:text-[50px] text-[40px] text-[#DE9400] w-[100%] mx-auto leading-28">
+                <div className="font-auster text-shadow-2 font-[600] lg:text-[60px] md:text-[50px] text-[40px] text-[#01193D] w-[100%] mx-auto leading-28">
                     Solution/Execution
                 </div>
 
