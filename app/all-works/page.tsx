@@ -1,7 +1,7 @@
 "use client"
 
 import WorksCard from "@/components/WorksCard"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import ContactUs from "@/components/ContactUs";
 
@@ -38,21 +38,25 @@ const Works = () => {
             const newIndex = direction === "left"
                 ? (prev > 0 ? prev - 1 : prev)
                 : (prev < maxIndex ? prev + 1 : prev);
-    
+
             // Scroll to top after state is updated
             setTimeout(() => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
             }, 0);
-    
+
             return newIndex;
         });
     };
-    
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [currentIndex]);
+
 
     return (
         <div className="w-[100.1%]  bg-white border-0 border-red-500 flex flex-col items-end overflow-hidden mt-[110px]">
-            
-            
+
+
             <div className="w-full">
                 <WorksCard item={data[currentIndex]} />
             </div>

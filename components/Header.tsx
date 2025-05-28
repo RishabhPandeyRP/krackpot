@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -17,19 +19,19 @@ const Header = () => {
         link: "#"
     }, {
         name: "CLIENTS",
-        link: "#clients"
+        link: "/#clients"
     }, {
         name: "CASE STUDIES",
         link: "/all-projects"
     }, {
         name: "CONTACT",
-        link: "#contact"
+        link: "/#contact"
     }, {
         name: "PRIVACY POLICY",
         link: "#"
     }]
     const icons = ["/Linkedin (1).svg", "/Meta.svg", "/Insta (1).svg"]
-
+    const pathname = usePathname();
 
     useEffect(() => {
         if (isOpen) {
@@ -43,6 +45,78 @@ const Header = () => {
             document.body.style.overflow = "auto";
         };
     }, [isOpen]);
+
+    const router = useRouter(); // ✅
+
+    const navClick = (e: React.MouseEvent, item: { name: string; link: string }) => {
+        e.preventDefault();
+        const link = item.link;
+        setIsOpen(false);
+
+        const isHashLink = link.includes("#");
+        const [path, hash] = link.split("#");
+        // if(!isHashLink){
+        //     router.push(item.link)
+        // }
+
+        if (isHashLink && (path === "" || path === "/")) {
+            // If already on home page or targeting home page
+            if (path === "" && typeof window !== "undefined") {
+                // Same-page anchor scroll
+                setTimeout(() => {
+                    const el = document.getElementById(hash);
+                    if (el) {
+
+                        const offset = el.getBoundingClientRect().top + window.pageYOffset - 110;
+                        window.scrollTo({ top: offset, behavior: "smooth" });
+                    }
+                }, 300);
+            } else {
+                router.push("/")
+                setTimeout(() => {
+                    const el = document.getElementById(hash);
+                    if (el) {
+                        const isMobile = window.innerWidth <= 650;
+                        const yOffset = isMobile ? 250 : -110;
+                        const offset = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                        window.scrollTo({ top: offset, behavior: "smooth" });
+                    }
+                }, 500)
+            }
+        } else {
+            // Normal navigation (e.g., /all-works)
+            console.log("link is : ", link)
+            router.push(link);
+        }
+    };
+
+    const handleLetsTalkClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+
+        if (pathname === "/") {
+            // Already on home page
+            const el = document.getElementById("contact");
+            if (el) {
+                const isMobile = window.innerWidth <= 650;
+                const yOffset = isMobile ? 250 : -110;
+                const offset = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: offset, behavior: "smooth" });
+            }
+        } else {
+            // Navigate to home then scroll
+            router.push("/");
+            setTimeout(() => {
+                const el = document.getElementById("contact");
+                if (el) {
+                    const isMobile = window.innerWidth <= 650;
+                    const yOffset = isMobile ? 250 : -110;
+                    const offset = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: offset, behavior: "smooth" });
+                }
+            }, 600);
+        }
+    };
+
 
     return (
         <>
@@ -66,9 +140,9 @@ const Header = () => {
                     </div>
 
                     <div className="lg:w-[20%] w-[40%] h-[100%] flex md:justify-between justify-end items-center border-0 border-blue-800">
-                        <div className="w-[50%] h-[40%] border border-[#01193D] rounded-lg relative hidden md:block">
+                        <div className="w-[50%] h-[40%] border border-[#01193D] rounded-lg relative hidden md:block cursor-pointer">
                             <button className="w-[100%] h-[100%] border border-[#01193D] rounded-lg bg-[#01193D] absolute top-1 left-1 flex justify-center items-center gap-[8%]">
-                                <Link href={"#contact"}><div>
+                                <Link href={"#contact"} onClick={handleLetsTalkClick}><div>
                                     Let’s Talk
                                 </div></Link>
 
@@ -117,13 +191,19 @@ const Header = () => {
                     <div className="flex flex-col w-[40%] justify-end items-end">
                         <div className="font-auster text-shadow text-stroke font-[600] lg:text-[50px] sm:text-[45px] text-[40px] text-[#DE9400] w-fit leading-tight">Menu</div>
                         {
-                            dataArr.map((item, index) => (
-                                item.link != "#" && <Link href={item.link} onClick={() => setIsOpen(false)} key={index}>
-                                    <div className="w-fit font-auster font-[900] lg:text-[35px] sm:text-[25px] text-[#01193D]" key={index}>
-                                        {item.name}
-                                    </div>
-                                </Link>
-                            ))
+                            dataArr.map((item, index) => {
+                                const isHash = item.link.includes("#");
+                                return (
+                                    item.link != "#" && <Link href={item.link} scroll={false} onClick={(e) => {
+                                        setIsOpen(false);
+                                        isHash && navClick(e, item)
+                                    }} key={index}>
+                                        <div className="w-fit font-auster font-[900] lg:text-[35px] sm:text-[25px] text-[#01193D]" key={index}>
+                                            {item.name}
+                                        </div>
+                                    </Link>
+                                )
+                            })
                         }
 
                         <div className="font-auster text-shadow text-stroke font-[600] lg:text-[50px] sm:text-[45px] text-[40px] text-[#DE9400] w-fit leading-tight text-nowrap">Follow us</div>

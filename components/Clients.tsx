@@ -89,6 +89,29 @@ const Clients = () => {
         </div>
     )
 
+    const [gridConfig, setGridConfig] = React.useState({ horizontalLines: 8, verticalLines: 8 })
+        
+        React.useEffect(() => {
+            const calculateGrid = () => {
+                const containerWidth = window.innerWidth
+                const containerHeight = window.innerWidth >= 1024 ? 1100 : 1100 // lg:h-[700px] h-[800px]
+                
+                // Calculate how many 100px cells fit in the container
+                const verticalLines = Math.floor(containerWidth / 135) + 1  // -1 because we need n-1 lines for n cells
+                const horizontalLines = Math.floor(containerHeight / 135) - 1
+                
+                setGridConfig({ 
+                    horizontalLines: Math.max(horizontalLines, 6), // Minimum 6 lines
+                    verticalLines: Math.max(verticalLines, 6)      // Minimum 6 lines
+                })
+            }
+            
+            calculateGrid()
+            window.addEventListener('resize', calculateGrid)
+            
+            return () => window.removeEventListener('resize', calculateGrid)
+        }, [])
+
     return (
         <div className="w-full lg:h-[1100px] sm:h-[1150px] h-[1100px] border-0 border-b-blue-700 relative overflow-hidden  flex flex-col gap-[10%] lg:gap-[0%] bg-[#efeff8]">
             
@@ -98,32 +121,32 @@ const Clients = () => {
             
             <div className="absolute inset-0 z-0 t">
                 {/* Horizontal lines */}
-                {Array.from({ length: 9 }).map((_, index) => (
+                {Array.from({ length: gridConfig.horizontalLines }).map((_, index) => (
                     <div
                         key={`h-${index}`}
                         className="absolute w-full border-t border-[#e2e4ee]"
-                        style={{ top: `${index * 12.5}%` }}
+                        style={{ top: `${index * 135}px` }}
                     ></div>
                 ))}
 
                 {/* Vertical lines */}
-                {Array.from({ length: 9 }).map((_, index) => (
+                {Array.from({ length: gridConfig.verticalLines }).map((_, index) => (
                     <div
                         key={`v-${index}`}
                         className="absolute h-full border-l border-[#e2e4ee]"
-                        style={{ left: `${index * 12.5}%` }}
+                        style={{ left: `${index * 135}px` }}
                     ></div>
                 ))}
 
                 {/* Intersection dots */}
-                {Array.from({ length: 9 }).map((_, i) => (
-                    Array.from({ length: 9 }).map((_, j) => (
+                {Array.from({ length: gridConfig.horizontalLines }).map((_, i) => (
+                    Array.from({ length: gridConfig.verticalLines }).map((_, j) => (
                         <div
                             key={`dot-${i}-${j}`}
-                            className="absolute w-1 h-1 bg-[#9098af] rounded-full"
+                            className="absolute w-1 h-1 bg-[#9098af77] rounded-full"
                             style={{
-                                top: `${i * 12.5}%`,
-                                left: `${j * 12.5}%`,
+                                top: `${i * 135}px`,
+                                left: `${j * 135}px`,
                                 transform: 'translate(-50%, -50%)'
                             }}
                         ></div>
@@ -145,7 +168,7 @@ const Clients = () => {
                     <Slider {...settings}>
                         {logosList.map((src, index) => (
                             <div key={index} className="px-2">
-                                <div className="w-[250px] h-[200px] md:w-[460px] bg-white border border-gray-300 flex items-center justify-center mx-auto !shadow-lg shadow-black/15">
+                                <div className="w-[250px] h-[200px] md:w-[250px] bg-white border border-gray-300 flex items-center justify-center mx-auto !shadow-lg shadow-black/15">
                                     <div className="relative w-[120px] md:w-[90px] h-[70px]">
                                         <Image
                                             src={src}
@@ -175,7 +198,7 @@ const Clients = () => {
                     <Slider {...settings}>
                         {logosList.map((src, index) => (
                             <div key={index} className="px-2">
-                                <div className="w-[250px] h-[200px] md:w-[460px] bg-white border border-gray-300 flex items-center justify-center mx-auto !shadow-lg shadow-black/15">
+                                <div className="w-[250px] h-[200px] md:w-[250px] bg-white border border-gray-300 flex items-center justify-center mx-auto !shadow-lg shadow-black/15">
                                     <div className="relative w-[120px] md:w-[90px] h-[70px]">
                                         <Image
                                             src={src}

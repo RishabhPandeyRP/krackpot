@@ -1,27 +1,10 @@
-import HeroSection from "@/components/HeroSection";
-import Team from "@/components/Team";
-import Clients from "@/components/Clients";
-import WhatWeDid from "@/components/WhatWeDid";
-import WhatWeDo from "@/components/WhatWeDo";
-import ClientsSay from "@/components/ClientsSay";
-import ContactUs from "@/components/ContactUs";
+import { Suspense } from "react";
+import HomeContent from "../components/HomeContent";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="w-[100.1%] overflow-hidden bg-white">
-      {/* <Header></Header> */}
-      <HeroSection></HeroSection>
-      <Team></Team>
-      <div id="clients">
-      <Clients></Clients>
-      </div>
-      
-      <WhatWeDid></WhatWeDid>
-      <WhatWeDo></WhatWeDo>
-      <ClientsSay></ClientsSay>
-      <div id="contact">
-        <ContactUs />
-      </div>
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }

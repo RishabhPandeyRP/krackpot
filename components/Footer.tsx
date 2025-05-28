@@ -1,30 +1,67 @@
+"use client"
 import Image from "next/image"
+import React from "react"
 const Footer = () => {
     const impLinks1 = ["ABOUT", "CLIENTS", "WORK", "CASE STUDY"]
     const impLinks2 = ["SERVICES", "TESTIMONIALS", "CONTACT", "PRIVACY POLICY"]
     const connect = ["krackpotdigital@gmail.com", "+91 85919 89911"]
     const icons = ["/Linkedin (1).svg", "/Meta.svg", "/Insta (1).svg"]
+
+    const [gridConfig, setGridConfig] = React.useState({ horizontalLines: 8, verticalLines: 8 })
+                    
+                    React.useEffect(() => {
+                    const calculateGrid = () => {
+                        const containerWidth = window.innerWidth
+                        const cellSize = 135 // Fixed cell size for square grid
+                        const isDesktop = window.innerWidth >= 1024
+                        
+                        // Calculate vertical lines based on screen width
+                        const verticalLines = Math.floor(containerWidth / cellSize) + 1
+                        
+                        // For horizontal lines:
+                        // Desktop: Use fixed height of 1400px
+                        // Mobile: Use a reasonable number of lines since height is auto
+                        let horizontalLines
+                        if (isDesktop) {
+                            horizontalLines = Math.floor((1300 + 4000) / cellSize)  // Based on lg:h-[1400px]
+                        } else {
+                            // For mobile h-auto, use a reasonable number of lines to cover content
+                            // Estimate based on typical mobile content height
+                            horizontalLines = 40 // This should cover most mobile content heights
+                        }
+                        
+                        setGridConfig({ 
+                            horizontalLines: Math.max(horizontalLines, 8), // Minimum 8 lines for mobile
+                            verticalLines: Math.max(verticalLines, 4)      // Minimum 4 lines
+                        })
+                    }
+                    
+                    calculateGrid()
+                    window.addEventListener('resize', calculateGrid)
+                    
+                    return () => window.removeEventListener('resize', calculateGrid)
+                }, [])
     return (
-        <div className="w-[100%] border-0 border-red-500 flex flex-col gap-12 bg-white py-9 relative">
+        <div className="w-[100.1%] border-0 border-red-500 flex flex-col gap-12 bg-white py-9 relative overflow-hidden">
 
             <div className="absolute inset-0 z-0">
                 {/* Horizontal lines of dots */}
-                {Array.from({ length: 3 }).map((_, i) => (
+                {Array.from({ length: gridConfig.horizontalLines }).map((_, i) => (
                     <div
                         key={`h-${i}`}
                         className="flex absolute w-full"
                         style={{
-                            top: `${i * 40}%`,
+                            top: `${i * 135}px`,
                             transform: 'translateY(-50%)'
                         }}
                     >
                         {/* Dots across the horizontal line */}
-                        {Array.from({ length: 9 }).map((_, j) => (
+                        {Array.from({ length: gridConfig.verticalLines }).map((_, j) => (
                             <div
                                 key={`dot-${i}-${j}`}
-                                className="absolute w-1 h-1 bg-[#9098af] rounded-full"
+                                className="absolute w-1 h-1 bg-[#9098af77] rounded-full"
                                 style={{
-                                    left: `${j * 12.5}%`,
+                                    left: `${j * 135}px`,
                                     transform: 'translateX(-50%)'
                                 }}
                             ></div>

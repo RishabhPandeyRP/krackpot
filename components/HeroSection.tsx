@@ -44,37 +44,61 @@ const AngledLine = ({
 
 const HeroSection = () => {
     const router = useRouter()
+
+    const [gridConfig, setGridConfig] = React.useState({ horizontalLines: 8, verticalLines: 8 })
+    
+    React.useEffect(() => {
+        const calculateGrid = () => {
+            const containerWidth = window.innerWidth
+            const containerHeight = window.innerWidth >= 1024 ? 700 : 800 // lg:h-[700px] h-[800px]
+            
+            // Calculate how many 100px cells fit in the container
+            const verticalLines = Math.floor(containerWidth / 135)  // -1 because we need n-1 lines for n cells
+            const horizontalLines = Math.floor(containerHeight / 135) - 1
+            
+            setGridConfig({ 
+                horizontalLines: Math.max(horizontalLines, 6), // Minimum 6 lines
+                verticalLines: Math.max(verticalLines, 6)      // Minimum 6 lines
+            })
+        }
+        
+        calculateGrid()
+        window.addEventListener('resize', calculateGrid)
+        
+        return () => window.removeEventListener('resize', calculateGrid)
+    }, [])
+
     return (
         <div className="w-full lg:h-[700px] h-[800px] relative overflow-hidden px-[5%]  border-0 border-green-500 flex  lg:flex-row flex-col justify-between items-center gap-5 bg-[#efeff8] mt-[110px]">
 
             <div className="absolute inset-0">
                 {/* Horizontal lines */}
-                {Array.from({ length: 8 }).map((_, index) => (
+                {Array.from({ length: gridConfig.horizontalLines }).map((_, index) => (
                     <div
                         key={`h-${index}`}
                         className="absolute w-full border-t border-[#e2e4ee]"
-                        style={{ top: `${(index + 1) * 25.5}%` }}
+                        style={{ top: `${(index + 1) * 135}px` }}
                     ></div>
                 ))}
 
                 {/* Vertical lines */}
-                {Array.from({ length: 8 }).map((_, index) => (
+                {Array.from({ length: gridConfig.verticalLines }).map((_, index) => (
                     <div
                         key={`v-${index}`}
                         className="absolute h-full border-l border-[#e2e4ee]"
-                        style={{ left: `${(index + 1) * 12.5}%` }}
+                        style={{ left: `${(index + 1) * 135}px` }}
                     ></div>
                 ))}
 
                 {/* Intersection dots */}
-                {Array.from({ length: 7 }).map((_, i) => (
-                    Array.from({ length: 7 }).map((_, j) => (
+                {Array.from({ length: gridConfig.horizontalLines }).map((_, i) => (
+                    Array.from({ length: gridConfig.verticalLines }).map((_, j) => (
                         <div
                             key={`dot-${i}-${j}`}
-                            className="absolute w-1 h-1 bg-[#9098af] rounded-full"
+                            className="absolute w-1 h-1 bg-[#9098af77] rounded-full"
                             style={{
-                                top: `${(i + 1) * 25.5}%`,
-                                left: `${(j + 1) * 12.5}%`,
+                                top: `${(i + 1) * 135}px`,
+                                left: `${(j + 1) * 135}px`,
                                 transform: 'translate(-50%, -50%)'
                             }}
                         ></div>

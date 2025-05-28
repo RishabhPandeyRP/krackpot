@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 const ContactUs = () => {
@@ -159,40 +159,75 @@ const ContactUs = () => {
         </div>
     )
 
+    const [gridConfig, setGridConfig] = React.useState({ horizontalLines: 8, verticalLines: 8 })
+                        
+                        React.useEffect(() => {
+                        const calculateGrid = () => {
+                            const containerWidth = window.innerWidth
+                            const cellSize = 135 // Fixed cell size for square grid
+                            const isDesktop = window.innerWidth >= 1024
+                            
+                            // Calculate vertical lines based on screen width
+                            const verticalLines = Math.floor(containerWidth / cellSize) + 1
+                            
+                            // For horizontal lines:
+                            // Desktop: Use fixed height of 1400px
+                            // Mobile: Use a reasonable number of lines since height is auto
+                            let horizontalLines
+                            if (isDesktop) {
+                                horizontalLines = Math.floor((1300 + 4000) / cellSize)  // Based on lg:h-[1400px]
+                            } else {
+                                // For mobile h-auto, use a reasonable number of lines to cover content
+                                // Estimate based on typical mobile content height
+                                horizontalLines = 40 // This should cover most mobile content heights
+                            }
+                            
+                            setGridConfig({ 
+                                horizontalLines: Math.max(horizontalLines, 8), // Minimum 8 lines for mobile
+                                verticalLines: Math.max(verticalLines, 4)      // Minimum 4 lines
+                            })
+                        }
+                        
+                        calculateGrid()
+                        window.addEventListener('resize', calculateGrid)
+                        
+                        return () => window.removeEventListener('resize', calculateGrid)
+                    }, [])
+
     return (
-        <div className="relative w-full lg:h-[2000px] h-auto border-0 border-red-500 py-[10%] lg:pt-0 flex flex-col bg-[#efeff8]">
+        <div className="relative w-full lg:h-[2000px] h-auto border-0 border-red-500 py-[10%] lg:pt-0 flex flex-col bg-[#efeff8] overflow-hidden">
 
             {/* <AngledLine></AngledLine>
             <AngledLine2></AngledLine2> */}
 
             <div className="absolute inset-0 z-0 ">
                 {/* Horizontal lines */}
-                {Array.from({ length: 11 }).map((_, index) => (
+                {Array.from({ length: gridConfig.horizontalLines }).map((_, index) => (
                     <div
                         key={`h-${index}`}
                         className="absolute w-full border-t border-[#e2e4ee]"
-                        style={{ top: `${index * 10.5}%` }}
+                        style={{ top: `${index * 135}px` }}
                     ></div>
                 ))}
 
                 {/* Vertical lines */}
-                {Array.from({ length: 9 }).map((_, index) => (
+                {Array.from({ length: gridConfig.verticalLines }).map((_, index) => (
                     <div
                         key={`v-${index}`}
                         className="absolute h-full border-l border-[#e2e4ee]"
-                        style={{ left: `${index * 12.5}%` }}
+                        style={{ left: `${index * 135}px` }}
                     ></div>
                 ))}
 
                 {/* Intersection dots */}
-                {Array.from({ length: 9 }).map((_, i) => (
-                    Array.from({ length: 9 }).map((_, j) => (
+                {Array.from({ length: gridConfig.horizontalLines }).map((_, i) => (
+                    Array.from({ length: gridConfig.verticalLines }).map((_, j) => (
                         <div
                             key={`dot-${i}-${j}`}
-                            className="absolute w-1 h-1 bg-[#9098af] rounded-full"
+                            className="absolute w-1 h-1 bg-[#9098af77] rounded-full"
                             style={{
-                                top: `${i * 10.5}%`,
-                                left: `${j * 12.5}%`,
+                                top: `${i * 135}px`,
+                                left: `${j * 135}px`,
                                 transform: 'translate(-50%, -50%)'
                             }}
                         ></div>
