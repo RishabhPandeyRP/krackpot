@@ -305,7 +305,7 @@ const WhatWeDo = () => {
             }, [])
 
     return (
-        <div className="w-[100%] min-h-[1300px] h-auto pt-[10%] relative overflow-hidden border-0 border-red-500 bg-[#efeff8]">
+        <div className="w-[100%] min-h-[1300px] h-auto pt-[10%] relative overflow-hidden border-0 border-red-500 bg-[#efeff8] pb-[5%]">
 
             {/* <AngledLine></AngledLine> */}
 
