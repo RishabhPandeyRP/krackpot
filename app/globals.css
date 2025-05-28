@@ -22,6 +22,11 @@
   .text-shadow {
     text-shadow: -3px 1.5px 0px #01193D;
   }
+
+  .text-shadow-2 {
+    text-shadow: -5px 1.5px 0px #DE9400;
+  }
+
   .text-stroke {
     -webkit-text-stroke: 0.2px #01193D;
     -webkit-text-fill-color: currentColor; /* Or transparent for just stroke */

@@ -125,7 +125,7 @@ const Team = () => {
             </div>
 
             <div className="w-[100%] lg:h-[700px] h-auto flex flex-col border-0 border-blue-500 z-10 relative ">
-                <div className="w-[100%] font-auster text-shadow text-stroke font-[700] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] leading-tight px-[5%] my-[0.5%]">
+                <div className="w-[100%] font-auster text-shadow-2 font-[700] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#01193D] leading-tight px-[5%] my-[0.5%]">
                     Who We Are
                 </div>
 
@@ -155,7 +155,7 @@ const Team = () => {
             </div>
 
             <div className="w-[100%] lg:h-[700px] h-auto  flex flex-col border-0 border-blue-500 py-20 lg:sm-0 z-10 relative">
-                <div className="w-[100%] font-auster text-shadow text-stroke font-[700] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] leading-28 px-[5%] my-[1%] text-center">
+                <div className="w-[100%] font-auster text-shadow-2 font-[700] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#01193D] leading-28 px-[5%] my-[1%] text-center">
                     The Team
                 </div>
 

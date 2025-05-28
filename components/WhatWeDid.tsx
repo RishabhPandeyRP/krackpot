@@ -159,7 +159,7 @@ const WhatWeDid = () => {
 
             <div className="w-[100%] lg:h-[500px] h-[550px] flex border-0 border-red-500 lg:flex-row flex-col gap-[10%] z-10 relative">
                 <div className="lg:w-[45%] w-[90%] mx-auto h-[100%] border-0 border-red-500 px-[7%]">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] w-fit leading-28">What We Did</div>
+                    <div className="font-auster text-shadow-2 font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#01193D] w-fit leading-28">What We Did</div>
 
                     <div className="font-auster font-[600] lg:text-[25px] sm:text-[20px] text-[15px] text-[#01193D] w-fit ">We are passionate about delivering exceptional work that exceeds our clients' expectations.</div>
 

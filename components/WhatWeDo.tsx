@@ -355,7 +355,7 @@ const WhatWeDo = () => {
                 </div>
 
                 <div className="lg:w-[30%] w-[85%] mx-auto h-[100%] lg:-mt-[7%] ">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] w-fit leading-28">
+                    <div className="font-auster text-shadow-2 font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#01193D] w-fit leading-28">
                         What We Do
                     </div>
 

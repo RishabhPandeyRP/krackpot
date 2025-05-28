@@ -243,7 +243,7 @@ const ContactUs = () => {
                 priority
             />
             <div className="lg:absolute lg:w-[45%] mx-auto w-[80%] h-[1100px] border-0 border-red-500 flex flex-col items-center z-10 lg:top-[20%] lg:left-[27%] left-0 px-[5%] gap-[2%]">
-                <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] text-center leading-tight w-[60%]">
+                <div className="font-auster text-shadow-2 font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#01193D] text-center leading-tight w-[60%]">
                     Let's Get Started
                 </div>
 

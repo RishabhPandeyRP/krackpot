@@ -132,12 +132,12 @@ const Footer = () => {
             <div className="w-[100%] flex flex-col lg:flex-row justify-between px-[5%] gap-10 md:gap-0 relative z-10">
 
                 <div className="flex flex-col items-start md:items-start">
-                    <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Find Us</div>
+                    <div className="font-auster text-shadow-2 font-[600] text-[50px] text-[#01193D] w-fit leading-28">Find Us</div>
                     <div className="font-auster font-[600] text-[18px] text-[#01193D] w-fit">Goregaon (E), Mumbai - 400063</div>
                 </div>
 
                 <div className="flex flex-col items-start md:items-start">
-                    <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Important Links</div>
+                    <div className="font-auster text-shadow-2 font-[600] text-[50px] text-[#01193D] w-fit leading-28">Important Links</div>
 
                     <div className="flex gap-5">
                         <ul className="flex flex-col font-auster font-[600] text-[18px] text-[#01193D] w-fit">
@@ -159,7 +159,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-col items-start md:items-start">
-                    <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Connect Us</div>
+                    <div className="font-auster text-shadow-2 font-[600] text-[50px] text-[#01193D] w-fit leading-28">Connect Us</div>
                     <ul className="font-auster font-[600] text-[18px] text-[#01193D] w-fit">
                         {
                             connect.map((item, index) => (
@@ -170,7 +170,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-col items-start md:items-start">
-                    <div className="font-auster text-shadow text-stroke font-[600] text-[50px] text-[#DE9400] w-fit leading-28">Follow Us</div>
+                    <div className="font-auster text-shadow-2 font-[600] text-[50px] text-[#01193D] w-fit leading-28">Follow Us</div>
                     <div className="w-full flex justify-around md:justify-start gap-4">
                         {
                             icons.map((item, index) => (

@@ -184,7 +184,7 @@ const ClientsSay = () => {
                 ))}
             </div>
 
-            <div className="font-auster text-shadow text-stroke font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#DE9400] w-fit leading-tight px-[5%] py-[5%] z-10 relative ">
+            <div className="font-auster text-shadow-2 font-[600] lg:text-[80px] md:text-[60px] sm:text-[50px] text-[40px] text-[#01193D] w-fit leading-tight px-[5%] py-[5%] z-10 relative ">
                 What our clients Say
             </div>
 

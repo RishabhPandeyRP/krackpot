@@ -57,7 +57,7 @@ const DropDown = ({ data }: {
             <div className="w-[100%] h-fit sm:flex-row flex-col items-center gap-[3%] relative py-10 px-0">
 
                 <div className=" w-full leading-28 flex items-center gap-5 border-0 border-red-500 relative">
-                    <div className="font-auster text-shadow text-stroke font-[600] lg:text-[55px] md:text-[35px] sm:text-[25px] text-[25px] text-[#DE9400] text-nowrap leading-tight border-0 border-red-500">
+                    <div className="font-auster text-shadow  font-[600] lg:text-[55px] md:text-[35px] sm:text-[25px] text-[25px] text-[#DE9400] text-nowrap leading-tight border-0 border-red-500">
                         {data.heading}
                     </div>
 
